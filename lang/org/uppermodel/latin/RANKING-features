@@ -1,0 +1,46 @@
+
+words
+- insert a Core
+- expand the Core with a Stem
+- classify the Stem as morphemes
+- lexify the Stem like this unit
+- insert an Edge
+- expand the Edge with a Branch
+- classify the Branch as morphemes
+- lexify the Branch as us-branch
+- place the Core before the Edge
+
+morphemes
+- prepare substance 
+
+phrase
+- insert MinorProcess
+- insert MinorRange
+
+quality-group
+- insert Quality
+- classify Quality words
+
+nexus-group
+- insert Nexus
+- classify Nexus words
+
+thing-group
+- insert Thing
+- classify Thing words
+
+quantity-group
+- insert Quantity
+- classify Quantity words
+
+circumstance-group
+- insert Circumstance
+- classify Circumstance words
+
+relation-group
+- insert Relation
+- classify Relation words
+
+event-group
+- insert Event
+- classify Event words
