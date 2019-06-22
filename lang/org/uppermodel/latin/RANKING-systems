@@ -44,7 +44,7 @@ GROUP-CLASS groups
   - choose quantity-group
 - if the Unit is an Event
   - treat the Unit as an Event
-  - resolve the name of the Eventg
+  - resolve the name of the Event
   - choose event-group
 - if the Unit is a Thing
   - treat the Unit as a Thing
