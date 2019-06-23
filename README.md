@@ -72,6 +72,13 @@ English:
 - The **United States** Embassy in Paris.
 - The **American** Embassy in Paris.
 
+##### 8. Classification
+
+German:
+- Das Licht ist an.
+- Das Zimmerlicht ist an.
+- Das Badezimmerlicht ist an.
+- Das Badlicht ist an.p
 
 ## Other text generators
 
