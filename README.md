@@ -43,7 +43,6 @@ In Spanish:
 
 - Der Film **beginnt** um 20 Uhr.
 - Der Film **fängt** um 20 Uhr **an**.
-
 - Der Film **endet** um 22 Uhr.
 - Der Film **hört** um 22 Uhr **auf**.
 
