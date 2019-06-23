@@ -63,4 +63,57 @@ public class Generator {
 		return associationMap;
 	}
 	
+	public final void generateInline(String template) {
+		System.out.print(template);
+	}
+	
+	public final void generate(String template) {
+		System.out.println(template);
+	}
+	
+	public final String generateString(String template) {
+		return template;
+	}
+	
+	public final Unit generateSpelling(String template) {
+		Unit spelling = new Unit(template);
+		return spelling;
+	}
+	
+	public final Unit generateWording(String template, Map<Unit, Unit> spellingMap) {
+		Unit wording = new Unit();
+		Unit spelling = new Unit(template);
+		spellingMap.put(wording, spelling);
+		return spelling;
+	}
+	
+	public final void generateInline(String template, String... params) {
+		System.out.print(generateString(template, params));
+	}
+	
+	public final void generate(String template, String... params) {
+		System.out.println(generateString(template, params));
+	}
+	
+	private final String generateString(String template, String[] params) {
+		String output = template;
+		// FIXME implement access to the generator core in {} and ().
+		for (String param : params) {
+			output = output.replaceFirst("[\\[]([^\\]])*[\\]]", param);
+		}
+		return output;
+	}
+	
+	public final Unit generateSpelling(String template, String... params) {
+		Unit spelling = new Unit(generateString(template, params));
+		return spelling;
+	}
+	
+	public final Unit generateWording(String template, Map<Unit, Unit> spellingMap, String... params) {
+		Unit wording = new Unit();
+		Unit spelling = new Unit(generateString(template, params));
+		spellingMap.put(wording, spelling);
+		return spelling;
+	}
+	
 }

@@ -64,8 +64,11 @@ public class GeneratorTest {
 		meaning.features.add("Slave");
 		Map<Unit, Unit> spellingMap = new HashMap<>();
 		Unit wording = this.generator.generate(spellingMap, speech, meaning);
-		System.out.println(wording);
 		System.out.println(wording.toString(spellingMap));
+		
+		generator.generate("I ate a pizza.");
+		generator.generate("I ate a [food].", "pizza");
+		generator.generate("I ate a [food].", "hotdog");
 	}
 	
 }
