@@ -72,6 +72,11 @@ English:
 - The **United States** Embassy in Paris.
 - The **American** Embassy in Paris.
 
+English:
+- Ivan Rakitic scored for Barcelona in **the** **4th** minute.
+- Ivan Rakitic scored for Barcelona in minute **four**.
+- Ivan Rakitic scored for Barcelona after **four** minutes.
+
 ##### 8. Classification
 
 German:
@@ -81,4 +86,3 @@ German:
 - Das **Bad**licht ist an.p
 
 ## Other text generators
-
