@@ -88,7 +88,6 @@ German:
 ##### 9. Participation vs classification
 English:
 - Ivan Rakitic scored for **Barcelona** in the 4th minute.
-English:
 - **Barcelona** **player** Ivan Rakitic scored in the 4th minute.
 
 ## Other text generators
