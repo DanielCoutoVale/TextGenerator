@@ -60,5 +60,18 @@ German:
 - **Ich** *interessiere* *mich* *für* **dich**.
 - **Mir** *gefällst* **du**.
 
+##### 7. Transcategorial semantic domains
+
+German:
+- Die Card **gilt** noch.
+- Die Card **ist** noch **gültig**.
+
+English:
+- The Embassy **of the United States** in Paris
+- The Embassy **of America** in Paris
+- The **United States** Embassy in Paris.
+- The **American** Embassy in Paris.
+
+
 ## Other text generators
 
