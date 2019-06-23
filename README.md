@@ -76,9 +76,9 @@ English:
 
 German:
 - Das Licht ist an.
-- Das Zimmerlicht ist an.
-- Das Badezimmerlicht ist an.
-- Das Badlicht ist an.p
+- Das **Zimmer**licht ist an.
+- Das **Badezimmer**licht ist an.
+- Das **Bad**licht ist an.p
 
 ## Other text generators
 
