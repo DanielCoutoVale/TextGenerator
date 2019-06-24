@@ -92,6 +92,8 @@ public class Realizer {
 			}
 		}
 		LinearStructure structure = new LinearStructure();
+		structure.features.addAll(wording.features);
+		structure.functions.addAll(wording.functions);
 		for (Knob knob : new HashSet<Knob>(map.values())) {
 			if (knob.children.size() == 0) {
 				structure.constituents.add(new Unit(knob));

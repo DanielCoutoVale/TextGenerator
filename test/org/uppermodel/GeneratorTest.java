@@ -15,6 +15,7 @@ import org.uppermodel.Inquirer;
 import org.uppermodel.Moulder;
 import org.uppermodel.Realizer;
 import org.uppermodel.Traverser;
+import org.uppermodel.theory.LinearStructure;
 import org.uppermodel.theory.Stratum;
 import org.uppermodel.theory.Structure;
 import org.uppermodel.theory.SystemNetwork;
@@ -63,8 +64,9 @@ public class GeneratorTest {
 		meaning.features.add("Thing");
 		meaning.features.add("Slave");
 		Map<Unit, Unit> spellingMap = new HashMap<>();
-		Unit wording = this.generator.generate(spellingMap, speech, meaning);
+		LinearStructure wording = (LinearStructure) this.generator.generate(spellingMap, speech, meaning);
 		System.out.println(wording.toString(spellingMap));
+		
 		
 		generator.generate("I ate a pizza.");
 		generator.generate("I ate a [food].", "pizza");

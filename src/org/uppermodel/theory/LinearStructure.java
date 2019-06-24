@@ -73,13 +73,15 @@ public class LinearStructure extends Structure {
 		}
 		return buffer.toString();
 	}
-
+	
 	private boolean marked() {
+		if (this.features.contains("words")) return false;
 		if (this.features.contains("template")) return false;
 		return true;
 	}
-
+	
 	private boolean spaced() {
+		if (this.features.contains("words")) return false;
 		if (this.features.contains("template")) return false;
 		return true;
 	}
