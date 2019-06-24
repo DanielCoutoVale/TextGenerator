@@ -1,24 +1,14 @@
 package org.uppermodel;
 
 import java.io.IOException;
-import java.io.InputStream;
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.Map;
-import java.util.Set;
 
 import org.junit.Before;
 import org.junit.Test;
-import org.uppermodel.Collector;
 import org.uppermodel.Generator;
-import org.uppermodel.Inquirer;
-import org.uppermodel.Moulder;
-import org.uppermodel.Realizer;
-import org.uppermodel.Traverser;
 import org.uppermodel.theory.LinearStructure;
-import org.uppermodel.theory.Stratum;
 import org.uppermodel.theory.Structure;
-import org.uppermodel.theory.SystemNetwork;
 import org.uppermodel.theory.Unit;
 
 public class GeneratorTest {
