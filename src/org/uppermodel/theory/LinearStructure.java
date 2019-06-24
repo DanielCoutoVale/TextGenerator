@@ -22,6 +22,11 @@ public class LinearStructure extends Structure {
 		orderings = linearStructure.orderings;
 	}
 	
+	public LinearStructure(String id) {
+		super(id);
+		orderings = new LinkedList<>();
+	}
+
 	public String toString() {
 		List<String> strings = new LinkedList<>();
 		for (List<Integer> ordering : orderings) {

@@ -26,4 +26,8 @@ public class Resource {
 		return directory.listFiles(file -> file.getName().endsWith("spellings"));
 	}
 	
+	public final File[] getCallingFiles() {
+		return directory.listFiles(file -> file.getName().endsWith("callings"));
+	}
+	
 }

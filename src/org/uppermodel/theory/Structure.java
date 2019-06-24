@@ -20,5 +20,10 @@ public class Structure extends Unit {
 		super(structure);
 		constituents = structure.constituents;
 	}
+
+	public Structure(String id) {
+		super(id);
+		constituents = new LinkedList<>();
+	}
 	
 }

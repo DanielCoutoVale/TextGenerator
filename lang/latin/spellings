@@ -1,5 +1,8 @@
 
-serv lex:servus
+domin base:dominus
+serv base:servus
+judex base:judex open
+judic base:judex closed
 
 us us-branch
 um um-branch

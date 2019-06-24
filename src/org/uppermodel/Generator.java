@@ -2,11 +2,9 @@ package org.uppermodel;
 
 import java.io.IOException;
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
-import java.util.Set;
 
 import org.uppermodel.theory.AssociationMap;
 import org.uppermodel.theory.LinearStructure;
@@ -28,11 +26,7 @@ public class Generator {
 	public Generator(String directoryName) throws IOException {
 		Resource resource = new Resource(directoryName);
 		SystemNetwork network = new SystemNetwork(Stratum.wording, resource.getSystemFiles());
-		Inquirer inquirer = new Inquirer(Stratum.meaning);
-		// FIXME move callings to a file
-		Set<Unit> servus = new HashSet<>();
-		servus.add(new Unit("lex:servus"));
-		inquirer.addCallings("Slave", servus);
+		Inquirer inquirer = new Inquirer(Stratum.meaning, resource.getCallingFiles());
 		this.traverser = new Traverser(network, inquirer);
 		this.collector = new Collector(Stratum.wording, resource.getFeatureFiles());
 		Moulder moulder = new Moulder(resource.getSpellingFiles());

@@ -26,19 +26,26 @@ public class GeneratorTest {
 		return speech;
 	}
 	
+	private void generate(String tax) {
+		Unit speech = newSpeech();
+		Unit meaning = new Unit();
+		meaning.features.add("Thing");
+		meaning.features.add(tax);
+		Map<Unit, Unit> spellingMap = new HashMap<>();
+		LinearStructure wording = (LinearStructure) this.generator.generate(spellingMap, speech, meaning);
+		System.out.println(wording.toString(spellingMap));
+	}
+	
 	private Generator generator;
 	
 	@Test
 	public void test1() throws IOException {
 		generator = new Generator("lang/latin");
-		Unit speech = newSpeech();
-		Unit meaning = new Unit();
-		meaning.features.add("Thing");
-		meaning.features.add("Slave");
-		Map<Unit, Unit> spellingMap = new HashMap<>();
-		LinearStructure wording = (LinearStructure) this.generator.generate(spellingMap, speech, meaning);
-		System.out.println(wording.toString(spellingMap));
+		generate("Slave");
+		generate("SlaveOwner");
 	}
+
+
 	
 	@Test
 	public final void test2() throws IOException {
