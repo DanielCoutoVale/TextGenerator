@@ -151,7 +151,12 @@ public class Generator {
 			}
 			case ')': {
 				if (scoped != '(') throw new Error();
-				if (params.length <= index) throw new Error();
+				// FIXME buffer should be a lexical item 
+				Unit spelling = new Unit(buffer.toString());
+				Unit constituent = new Unit();
+				ordering.add(ordering.size());
+				wording.constituents.add(constituent);
+				spellingMap.put(constituent, spelling);
 				buffer = new StringBuffer();
 				scoped = null;
 				break;
@@ -159,9 +164,17 @@ public class Generator {
 			case '}': {
 				if (scoped != '{') throw new Error();
 				if (params.length <= index) throw new Error();
+				String param = params[index++];
+				// FIXME param should be a lexical item
+				Unit spelling = new Unit(param);
+				Unit constituent = new Unit();
+				ordering.add(ordering.size());
+				wording.constituents.add(constituent);
+				spellingMap.put(constituent, spelling);
 				buffer = new StringBuffer();
 				scoped = null;
 				break;
+
 			}
 			}
 		}

@@ -69,6 +69,10 @@ public class GeneratorTest {
 		generator.generate("I ate a pizza.");
 		generator.generate("I ate a [food].", "pizza");
 		generator.generate("I ate a [food].", "hotdog");
+		generator.generate("I ate [number] (pizza).", "one");
+		generator.generate("I ate [number] {food}.", "one", "hotdog");
+		generator.generate("I ate [number] (pizza).", "two");
+		generator.generate("I ate [number] {food}.", "two", "hotdog");
 	}
 	
 }
