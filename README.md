@@ -60,7 +60,7 @@ German:
 - **Ich** *interessiere* *mich* *für* **dich**.
 - **Mir** *gefällst* **du**.
 
-##### 7. Transcategorial semantic domains
+##### 7. Transgrammatical semantic domains
 
 German:
 - Die Card **gilt** noch.
