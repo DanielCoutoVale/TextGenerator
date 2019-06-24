@@ -41,20 +41,7 @@ public class GeneratorTest {
 	
 	@Before
 	public void prepare() throws IOException {
-		InputStream isA = GeneratorTest.class.getResourceAsStream("latin/RANKING-systems");
-		InputStream isB = GeneratorTest.class.getResourceAsStream("latin/RANKING-features");
-		SystemNetwork network = new SystemNetwork(Stratum.wording, isA);
-		Inquirer inquirer = new Inquirer(Stratum.meaning);
-		Set<Unit> servus = new HashSet<>();
-		servus.add(new Unit("lex:servus"));
-		inquirer.addCallings("Slave", servus);
-		Traverser traverser = new Traverser(network, inquirer);
-		Collector collector = new Collector(Stratum.wording, isB);
-		Moulder moulder = new Moulder(GeneratorTest.class.getResourceAsStream("latin/forms"));
-		Realizer realizer = new Realizer(moulder);
-		this.generator = new Generator(traverser, collector, realizer);
-		isA.close();
-		isB.close();
+		generator = new Generator("lang/org/uppermodel/latin");
 	}
 	
 	@Test

@@ -42,6 +42,13 @@ public class Collector {
 		load(is);
 	}
 	
+	public Collector(Stratum stratum, File[] files) throws IOException {
+		this.stratum = stratum;
+		for (File file : files) {
+			load(new FileInputStream(file));
+		}
+	}
+
 	public final void load(InputStream is) throws IOException {
 		InputStreamReader isr = new InputStreamReader(is);
 		BufferedReader br = new BufferedReader(isr);
@@ -65,6 +72,7 @@ public class Collector {
 				}
 			}
 		}
+		br.close();
 	}
 
 	private Gate makeGate(String line) {

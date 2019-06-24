@@ -33,6 +33,14 @@ public class SystemNetwork {
 		load(is);
 	}
 	
+	public SystemNetwork(Stratum stratum, File[] files) throws IOException {
+		this.stratum = stratum;
+		this.systems = new LinkedList<>();
+		for (File file : files) {
+			load(new FileInputStream(file));
+		}
+	}
+
 	private void load(InputStream is) throws IOException {
 		InputStreamReader isr = new InputStreamReader(is);
 		BufferedReader br = new BufferedReader(isr);

@@ -1,14 +1,19 @@
 package org.uppermodel;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 import org.uppermodel.theory.AssociationMap;
 import org.uppermodel.theory.LinearStructure;
 import org.uppermodel.theory.Stratum;
 import org.uppermodel.theory.Structure;
+import org.uppermodel.theory.SystemNetwork;
 import org.uppermodel.theory.Unit;
 
 public class Generator {
@@ -20,6 +25,20 @@ public class Generator {
 	private final Collector collector;
 	
 	private final Realizer realizer;
+	
+	public Generator(String directoryName) throws IOException {
+		Resource resource = new Resource(directoryName);
+		SystemNetwork network = new SystemNetwork(Stratum.wording, resource.getSystemFiles());
+		Inquirer inquirer = new Inquirer(Stratum.meaning);
+		// FIXME move callings to a file
+		Set<Unit> servus = new HashSet<>();
+		servus.add(new Unit("lex:servus"));
+		inquirer.addCallings("Slave", servus);
+		this.traverser = new Traverser(network, inquirer);
+		this.collector = new Collector(Stratum.wording, resource.getFeatureFiles());
+		Moulder moulder = new Moulder(resource.getSpellingFiles());
+		this.realizer = new Realizer(moulder);		
+	}
 
 	public Generator(Traverser traverser, Collector collector, Realizer realizer) {
 		this.traverser = traverser;
