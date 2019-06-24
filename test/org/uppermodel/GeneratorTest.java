@@ -29,13 +29,9 @@ public class GeneratorTest {
 	
 	private Generator generator;
 	
-	@Before
-	public void prepare() throws IOException {
-		generator = new Generator("lang/org/uppermodel/latin");
-	}
-	
 	@Test
-	public void test1() {
+	public void test1() throws IOException {
+		generator = new Generator("lang/org/uppermodel/latin");
 		Unit speech = newSpeech();
 		Unit meaning = new Unit();
 		meaning.features.add("Thing");
@@ -43,8 +39,11 @@ public class GeneratorTest {
 		Map<Unit, Unit> spellingMap = new HashMap<>();
 		LinearStructure wording = (LinearStructure) this.generator.generate(spellingMap, speech, meaning);
 		System.out.println(wording.toString(spellingMap));
-		
-		
+	}
+	
+	@Test
+	public final void test2() throws IOException {
+		generator = new Generator("lang/org/uppermodel/latin");
 		generator.generate("I ate a pizza.");
 		generator.generate("I ate a [food].", "pizza");
 		generator.generate("I ate a [food].", "hotdog");
