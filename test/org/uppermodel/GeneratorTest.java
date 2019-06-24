@@ -4,7 +4,6 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.junit.Before;
 import org.junit.Test;
 import org.uppermodel.Generator;
 import org.uppermodel.theory.LinearStructure;
@@ -31,7 +30,7 @@ public class GeneratorTest {
 	
 	@Test
 	public void test1() throws IOException {
-		generator = new Generator("lang/org/uppermodel/latin");
+		generator = new Generator("lang/latin");
 		Unit speech = newSpeech();
 		Unit meaning = new Unit();
 		meaning.features.add("Thing");
@@ -43,7 +42,7 @@ public class GeneratorTest {
 	
 	@Test
 	public final void test2() throws IOException {
-		generator = new Generator("lang/org/uppermodel/latin");
+		generator = new Generator("lang/latin");
 		generator.generate("I ate a pizza.");
 		generator.generate("I ate a [food].", "pizza");
 		generator.generate("I ate a [food].", "hotdog");
