@@ -50,7 +50,7 @@ public class Generator {
 		AssociationMap map = generate(spellingMap, speech, meaning, wording, null, null, null);
 		return map.getUnit(Stratum.wording);
 	}
-
+	
 	private final AssociationMap generate(Map<Unit, Unit> spellingMap, Unit speech, Unit meaning, Unit wording, Unit calling, Unit spelling, Unit writing) {
 		AssociationMap associationMap = new AssociationMap();
 		associationMap.setUnit(Stratum.meaning, meaning);
