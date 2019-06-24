@@ -1,8 +1,12 @@
 package org.uppermodel;
 
+import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Map;
 
 import org.uppermodel.theory.AssociationMap;
+import org.uppermodel.theory.LinearStructure;
 import org.uppermodel.theory.Stratum;
 import org.uppermodel.theory.Structure;
 import org.uppermodel.theory.Unit;
@@ -96,12 +100,79 @@ public class Generator {
 	}
 	
 	private final String generateString(String template, String[] params) {
-		String output = template;
-		// FIXME implement access to the generator core in {} and ().
-		for (String param : params) {
-			output = output.replaceFirst("[\\[]([^\\]])*[\\]]", param);
+		LinearStructure wording = new LinearStructure();
+		List<Integer> ordering = new LinkedList<>();
+		wording.features.add("template");
+		wording.orderings.add(ordering);
+		Map<Unit, Unit> spellingMap = new HashMap<>();
+		StringBuffer buffer = new StringBuffer();
+		boolean escaped = false;
+		Character scoped = null;
+		int index = 0;
+		for (int i = 0; i < template.length(); i++) {
+			char ch = template.charAt(i);
+			if (escaped) {
+				escaped = false;
+				buffer.append(ch);
+			}
+			switch(ch) {
+			default: {
+				buffer.append(ch);
+				break;
+			}
+			case '\\':
+				escaped = true;
+				break;
+			case '(':
+			case '[':
+			case '{': {
+				if (scoped != null) throw new Error();
+				scoped = ch;
+				Unit spelling = new Unit(buffer.toString());
+				Unit constituent = new Unit();
+				ordering.add(ordering.size());
+				wording.constituents.add(constituent);
+				spellingMap.put(constituent, spelling);
+				buffer = new StringBuffer();
+				break;
+			}
+			case ']': {
+				if (scoped != '[') throw new Error();
+				if (params.length <= index) throw new Error();
+				String param = params[index++];
+				Unit spelling = new Unit(param);
+				Unit constituent = new Unit();
+				ordering.add(ordering.size());
+				wording.constituents.add(constituent);
+				spellingMap.put(constituent, spelling);
+				buffer = new StringBuffer();
+				scoped = null;
+				break;
+			}
+			case ')': {
+				if (scoped != '(') throw new Error();
+				if (params.length <= index) throw new Error();
+				buffer = new StringBuffer();
+				scoped = null;
+				break;
+			}
+			case '}': {
+				if (scoped != '{') throw new Error();
+				if (params.length <= index) throw new Error();
+				buffer = new StringBuffer();
+				scoped = null;
+				break;
+			}
+			}
 		}
-		return output;
+		if (buffer.length() > 0) {
+			Unit spelling = new Unit(buffer.toString());
+			Unit constituent = new Unit();
+			ordering.add(ordering.size());
+			wording.constituents.add(constituent);
+			spellingMap.put(constituent, spelling);
+		}
+		return wording.toString(spellingMap);
 	}
 	
 	public final Unit generateSpelling(String template, String... params) {

@@ -55,7 +55,7 @@ public class LinearStructure extends Structure {
 			for (Integer order : ordering) {
 				Unit constituent = constituents.get(order);
 				if (buffer.length() != 0) {
-					buffer.append(" ");
+					if (spaced()) buffer.append(" ");
 				}
 				buffer.append(constituent.toString(spellingMap));
 			}
@@ -67,11 +67,21 @@ public class LinearStructure extends Structure {
 			if (buffer.length() != 0) {
 				buffer.append(" or ");
 			}
-			buffer.append("(");
+			if (marked()) buffer.append("(");
 			buffer.append(string);
-			buffer.append(")");
+			if (marked()) buffer.append(")");
 		}
 		return buffer.toString();
+	}
+
+	private boolean marked() {
+		if (this.features.contains("template")) return false;
+		return true;
+	}
+
+	private boolean spaced() {
+		if (this.features.contains("template")) return false;
+		return true;
 	}
 	
 }
