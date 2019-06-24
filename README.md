@@ -1,5 +1,5 @@
 # TextGenerator
-An open-source text generator for the Systemic Functional Theory of language.
+An open-source text generator applying the Systemic Functional Theory of language.
 
 This is a work in progress. The first beta version is planned for December 2019 and it will be announce here.
 
@@ -60,7 +60,7 @@ German:
 - **Ich** *interessiere* *mich* *für* **dich**.
 - **Mir** *gefällst* **du**.
 
-##### 7. Transcategorial semantic domains
+##### 7. Transgrammatical semantic domains
 
 German:
 - Die Card **gilt** noch.
@@ -72,6 +72,22 @@ English:
 - The **United States** Embassy in Paris.
 - The **American** Embassy in Paris.
 
+English:
+- Ivan Rakitic scored for Barcelona in **the** **4th** minute.
+- Ivan Rakitic scored for Barcelona in minute **four**.
+- Ivan Rakitic scored for Barcelona after **four** minutes.
+
+##### 8. Classification
+
+German:
+- Das Licht ist an.
+- Das **Zimmer**licht ist an.
+- Das **Badezimmer**licht ist an.
+- Das **Bad**licht ist an.
+
+##### 9. Participation vs classification
+English:
+- Ivan Rakitic scored for **Barcelona** in the 4th minute.
+- **Barcelona** **player** Ivan Rakitic scored in the 4th minute.
 
 ## Other text generators
-
