@@ -17,6 +17,18 @@ public class Generator {
 	
 	private static final String SPEECH = "Speech".intern();
 
+	public final static Unit newSpeech() {
+		Structure speech = new Structure(new Unit());
+		Unit sayer = new Unit();
+		Unit addressee = new Unit();
+		speech.constituents.add(sayer);
+		speech.constituents.add(addressee);
+		speech.features.add(SPEECH);
+		sayer.functions.add("sayer");
+		addressee.functions.add("addressee");
+		return speech;
+	}
+
 	private final Traverser traverser;
 
 	private final Collector collector;
@@ -45,7 +57,7 @@ public class Generator {
 		return map.getUnit(Stratum.wording);
 	}
 	
-	private final AssociationMap generate(Map<Unit, Unit> spellingMap, Unit speech, Unit meaning, Unit wording, Unit calling, Unit spelling, Unit writing) {
+	public final AssociationMap generate(Map<Unit, Unit> spellingMap, Unit speech, Unit meaning, Unit wording, Unit calling, Unit spelling, Unit writing) {
 		AssociationMap associationMap = new AssociationMap();
 		associationMap.setUnit(Stratum.meaning, meaning);
 		associationMap.setUnit(Stratum.wording, wording);
@@ -210,6 +222,42 @@ public class Generator {
 		Unit spelling = new Unit(generateString(template, params));
 		spellingMap.put(wording, spelling);
 		return spelling;
+	}
+	
+	public final void generateWordInline(String base, String... features) {
+		System.out.print(generateWordAsString(base, features));
+	}
+	
+	public final void generateWord(String base, String... features) {
+		System.out.println(generateWordAsString(base, features));
+	}
+	
+	public final String generateWordAsString(String base, String... features) {
+		Map<Unit, Unit> spellingMap = new HashMap<>();
+		Unit wording = generateWordAsWording(spellingMap, base, features);
+		return wording.toString(spellingMap);
+	}
+	
+	public final Unit generateWordAsSpelling(String base, String... features) {
+		return new Unit(generateWordAsString(base, features));
+	}
+	
+	public final Unit generateWordAsWording(Map<Unit, Unit> spellingMap, String base, String... features) {
+		Unit speech = newSpeech();
+		Unit wording = new Unit();
+		wording.features.add("wording");
+		wording.features.add("words");
+		for (String feature : features) {
+			wording.features.add(feature);
+		}
+		LinearStructure calling = new LinearStructure();
+		calling.constituents.add(new Unit(base));
+		AssociationMap map = this.generate(spellingMap, speech, null, wording, calling, null, null);
+		return map.getUnit(Stratum.wording);
+	}
+
+	public void setLogging(boolean logging) {
+		this.realizer.setLogging(logging);
 	}
 	
 }

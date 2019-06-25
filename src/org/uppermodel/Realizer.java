@@ -19,9 +19,11 @@ import org.uppermodel.theory.Unit;
 public class Realizer {
 		
 	private final Moulder moulder;
+	private boolean logging;
 
 	public Realizer(Moulder moulder) {
 		this.moulder = moulder;
+		this.logging = true;
 	}
 	
 	public Unit realize(List<Statement> statements) {
@@ -37,6 +39,20 @@ public class Realizer {
 		Unit wording = associationMap.getUnit(Stratum.wording);
 		Unit calling = associationMap.getUnit(Stratum.calling);
 		List<Statement> statements = wording.statements;
+		
+		// Logging
+		if (logging)
+		for (Statement statement : statements) {
+			if (statement.type() == log) {
+				for (int i = 0; i < statement.size(); i++) {
+					if (i != 0) System.out.print(" ");
+					String operand = statement.operand(i);
+					if (operand.equals("#")) operand = wording.id;
+					System.out.print(operand);
+				}
+				System.out.println();
+			}
+		}
 		
 		// Spelling
 		List<String> moulds = new LinkedList<>();
@@ -276,6 +292,10 @@ public class Realizer {
 			}
 		}
 		return false;
+	}
+
+	public final void setLogging(boolean logging) {
+		this.logging = logging;
 	}
 	
 }

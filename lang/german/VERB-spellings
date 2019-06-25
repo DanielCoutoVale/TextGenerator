@@ -1,0 +1,21 @@
+
+hab base:haben bare-aspect long
+ha base:haben bare-aspect short
+hab base:haben ge-aspect
+hat base:haben te-aspect
+
+sag base:sagen bare-aspect long
+sag base:sagen bare-aspect short
+sag base:sagen te-aspect
+sag base:sagen ge-aspect
+
+
+e e-leaf
+st st-leaf
+t t-leaf
+en n-leaf long
+n n-leaf short
+
+ge ge-branch
+t n-branch
+te te-branch

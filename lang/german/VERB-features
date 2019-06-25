@@ -1,0 +1,117 @@
+
+words
+- insert a Core
+- expand the Core with a Stem
+- classify the Stem as stem
+- lexify the Stem like this unit
+
+verb and ge-core
+- log that the unit # is a ge-core verb
+- classify the Stem as ge-aspect
+- expand the Core with a Branch1
+- expand the Core with a Branch2
+- classify the Branch1 as branch
+- lexify the Branch1 as ge-branch
+- classify the Branch2 as branch
+- lexify the Branch2 as n-branch
+- place the Branch1 before the Core
+- place the Core before the Branch2
+
+verb and bare-core
+- log that the unit # is a bare-core verb
+- classify the Stem as bare-aspect
+- insert an Seam
+- expand the Seam with a Leaf
+- classify the Leaf as leaf
+- classify the Leaf as bare-stem
+- place the Core before the Seam
+
+verb and te-core
+- log that the unit # is a te-core verb
+- classify the Stem as te-aspect
+- expand the Core with a Branch
+- classify the Branch as branch
+- lexify the Branch as te-branch
+- place the Core before the Branch
+
+verb and te-core and (seam2 or seam4 or seam5)
+- insert an Seam
+- expand the Seam with a Leaf
+- classify the Leaf as leaf
+- classify the Leaf as te-branch
+- place the Branch before the Seam
+
+verb and bare-core and seam1
+- log that the unit # is a seam1 stem
+- lexify the Leaf as e-leaf
+
+verb and bare-core and seam1
+- classify Stem seam1
+
+verb and seam2
+- log that the unit # is a seam2 stem
+- lexify the Leaf as st-leaf
+
+verb and bare-core and seam2
+- classify Stem seam2
+
+verb and bare-core and seam3
+- log that the unit # is a seam3 stem
+- lexify the Leaf as t-leaf
+
+verb and bare-core and seam3
+- classify Stem seam3
+
+verb and seam4
+- log that the unit # is a seam4 stem
+- lexify the Leaf as t-leaf
+
+verb and bare-core and seam4
+- classify Stem seam4
+
+verb and seam5
+- log that the unit # is a seam5 stem
+- classify the Leaf as n-leaf
+- lexify the Leaf as n-leaf
+
+verb and bare-core and seam5
+- classify Stem seam5
+
+stem
+- log that the unit # is a stem
+- prepare substance
+
+stem and te-aspect
+- log that the unit # is a te-aspect stem
+- mould substance as te-aspect
+
+stem and ge-aspect
+- log that the unit # is a ge-aspect stem
+- mould substance as ge-aspect
+
+stem and bare-aspect
+- log that the unit # is a bare-aspect stem
+- mould substance as bare-aspect
+
+stem and bare-aspect and (seam1 or seam4 or seam5)
+- log that the unit # is a long stem
+- mould substance as long
+
+stem and bare-aspect and (seam2 or seam3)
+- log that the unit # is a short stem
+- mould substance as short
+
+branch
+- prepare substance
+
+leaf
+- log that the unit # is a leaf
+- prepare substance
+
+leaf and n-leaf and bare-stem
+- log that the unit # is a n-leaf leaf for a bare-stem
+- mould substance as long
+
+leaf and n-leaf and te-branch
+- log that the unit # is a n-leaf leaf for a te-branch
+- mould substance as short

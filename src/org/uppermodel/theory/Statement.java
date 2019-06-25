@@ -40,7 +40,7 @@ public class Statement {
 	private static final String JUST = "just".intern();
 	private static final String LEXIFY = "lexify".intern();
 	private static final String LIKE = "like".intern();
-	private static final String THIS = "this".intern();
+	private static final String LOG = "log".intern();
 	private static final String UNIT = "unit".intern();
 	private static final String MOULD = "mould".intern();
 	private static final String NOT = "not".intern();
@@ -50,13 +50,15 @@ public class Statement {
 	private static final String RIGHT = "right".intern();
 	private static final String START = "start".intern();
 	private static final String SUBSTANCE = "substance".intern();
+	private static final String THAT = "that".intern();
 	private static final String THE = "the".intern();
+	private static final String THIS = "this".intern();
 	private static final String WITH = "with".intern();
 	
 	public static enum Type {
 		insert, expand, conflate, placeBefore, placeJustBefore,
 		placeAtFront, placeAtBack, classify, outclassify, lexify,
-		lexifyDown, inflectify, mould, prepare
+		lexifyDown, inflectify, mould, prepare, log
 	}
 	
 	private final String[] insert1 = {INSERT, null};
@@ -110,6 +112,19 @@ public class Statement {
 	private final String[] lexifyDown1 = {LEXIFY, null, LIKE, THIS, UNIT};
 	private final String[] lexifyDown2 = {LEXIFY, THE, null, LIKE, THIS, UNIT};
 	
+	private final String[] log1 = {LOG, null};
+	private final String[] log2 = {LOG, THAT, null, null};
+	private final String[] log3 = {LOG, THAT, null, null, null};
+	private final String[] log4 = {LOG, THAT, null, null, null, null};
+	private final String[] log5 = {LOG, THAT, null, null, null, null, null};
+	private final String[] log6 = {LOG, THAT, null, null, null, null, null, null};
+	private final String[] log7 = {LOG, THAT, null, null, null, null, null, null, null};
+	private final String[] log8 = {LOG, THAT, null, null, null, null, null, null, null, null};
+	private final String[] log9 = {LOG, THAT, null, null, null, null, null, null, null, null, null};
+	private final String[] logA = {LOG, THAT, null, null, null, null, null, null, null, null, null, null};
+	private final String[] logB = {LOG, THAT, null, null, null, null, null, null, null, null, null, null, null};
+	private final String[] logC = {LOG, THAT, null, null, null, null, null, null, null, null, null, null, null, null};
+	
 	private final String[] inflectify1 = {INFLECTIFY, null, null};
 	private final String[] inflectify2 = {INFLECTIFY, null, AS, null};
 	private final String[] inflectify3 = {INFLECTIFY, THE, null, AS, null};
@@ -135,7 +150,8 @@ public class Statement {
 			lexifyDown1, lexifyDown2,
 			inflectify1, inflectify2, inflectify3,
 			mould1, mould2, mould3, mould4,
-			prepare1
+			prepare1,
+			log1, log2, log3, log4, log5, log6, log7, log8, log9, logA, logB, logC
 	};
 	
 	private List<String> tokens;
@@ -230,6 +246,18 @@ public class Statement {
 		if (matches(lexify3)) return Type.lexify;
 		if (matches(lexifyDown1)) return Type.lexifyDown;
 		if (matches(lexifyDown2)) return Type.lexifyDown;
+		if (matches(log1)) return Type.log;
+		if (matches(log2)) return Type.log;
+		if (matches(log3)) return Type.log;
+		if (matches(log4)) return Type.log;
+		if (matches(log5)) return Type.log;
+		if (matches(log6)) return Type.log;
+		if (matches(log7)) return Type.log;
+		if (matches(log8)) return Type.log;
+		if (matches(log9)) return Type.log;
+		if (matches(logA)) return Type.log;
+		if (matches(logB)) return Type.log;
+		if (matches(logC)) return Type.log;
 		if (matches(inflectify1)) return Type.inflectify;
 		if (matches(inflectify2)) return Type.inflectify;
 		if (matches(inflectify3)) return Type.inflectify;

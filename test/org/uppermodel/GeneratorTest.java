@@ -6,28 +6,17 @@ import java.util.Map;
 
 import org.junit.Test;
 import org.uppermodel.Generator;
+import org.uppermodel.theory.AssociationMap;
 import org.uppermodel.theory.LinearStructure;
+import org.uppermodel.theory.Stratum;
 import org.uppermodel.theory.Structure;
 import org.uppermodel.theory.Unit;
 
 public class GeneratorTest {
-
-	private static final String SPEECH = "Speech".intern();
-
-	private final static Unit newSpeech() {
-		Structure speech = new Structure(new Unit());
-		Unit sayer = new Unit();
-		Unit addressee = new Unit();
-		speech.constituents.add(sayer);
-		speech.constituents.add(addressee);
-		speech.features.add(SPEECH);
-		sayer.functions.add("sayer");
-		addressee.functions.add("addressee");
-		return speech;
-	}
 	
-	private void generate(String tax) {
-		Unit speech = newSpeech();
+	private void generateThing(String tax) throws IOException {
+		generator = new Generator("lang/latin");
+		Unit speech = Generator.newSpeech();
 		Unit meaning = new Unit();
 		meaning.features.add("Thing");
 		meaning.features.add(tax);
@@ -40,13 +29,10 @@ public class GeneratorTest {
 	
 	@Test
 	public void test1() throws IOException {
-		generator = new Generator("lang/latin");
-		generate("Slave");
-		generate("SlaveOwner");
+		generateThing("Slave");
+		generateThing("SlaveOwner");
 	}
 
-
-	
 	@Test
 	public final void test2() throws IOException {
 		generator = new Generator("lang/latin");
@@ -57,6 +43,34 @@ public class GeneratorTest {
 		generator.generate("I ate [number] {food}.", "one", "hotdog");
 		generator.generate("I ate [number] (pizza).", "two");
 		generator.generate("I ate [number] {food}.", "two", "hotdog");
+	}
+
+	@Test
+	public final void test3() throws IOException {
+		generator = new Generator("lang/german");
+		generator.setLogging(false);
+		generator.generateWord("base:sagen", "verb", "ge-core");
+		generator.generateWord("base:sagen", "verb", "bare-core", "seam1");
+		generator.generateWord("base:sagen", "verb", "bare-core", "seam2");
+		generator.generateWord("base:sagen", "verb", "bare-core", "seam3");
+		generator.generateWord("base:sagen", "verb", "bare-core", "seam4");
+		generator.generateWord("base:sagen", "verb", "bare-core", "seam5");
+		generator.generateWord("base:sagen", "verb", "te-core", "seam1");
+		generator.generateWord("base:sagen", "verb", "te-core", "seam2");
+		generator.generateWord("base:sagen", "verb", "te-core", "seam3");
+		generator.generateWord("base:sagen", "verb", "te-core", "seam4");
+		generator.generateWord("base:sagen", "verb", "te-core", "seam5");
+		generator.generateWord("base:haben", "verb", "ge-core");
+		generator.generateWord("base:haben", "verb", "bare-core", "seam1");
+		generator.generateWord("base:haben", "verb", "bare-core", "seam2");
+		generator.generateWord("base:haben", "verb", "bare-core", "seam3");
+		generator.generateWord("base:haben", "verb", "bare-core", "seam4");
+		generator.generateWord("base:haben", "verb", "bare-core", "seam5");
+		generator.generateWord("base:haben", "verb", "te-core", "seam1");
+		generator.generateWord("base:haben", "verb", "te-core", "seam2");
+		generator.generateWord("base:haben", "verb", "te-core", "seam3");
+		generator.generateWord("base:haben", "verb", "te-core", "seam4");
+		generator.generateWord("base:haben", "verb", "te-core", "seam5");
 	}
 	
 }
