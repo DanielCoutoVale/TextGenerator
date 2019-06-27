@@ -4,8 +4,10 @@ An open-source text generator applying the Systemic Functional Theory of languag
 This is a work in progress. The first beta version is planned for December 2019 and it will be announce here.
 
 ## How to use
-  Generator generator = new Generator("[path-to-grammar-directory]");
-  generator.generate("[lex]", "[feature1]", "[feature2]"...);
+```java
+Generator generator = new Generator("[path-to-grammar-directory]");
+generator.generate("[lex]", "[feature1]", "[feature2]"...);
+```
 
 ## Issues
 
