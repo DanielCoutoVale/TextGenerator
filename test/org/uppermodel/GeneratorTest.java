@@ -68,6 +68,18 @@ public class GeneratorTest {
 		generator.generateWord("base:haben", "verb", "te-core", "seam3");
 		generator.generateWord("base:haben", "verb", "te-core", "seam4");
 		generator.generateWord("base:haben", "verb", "te-core", "seam5");
+		generator.generateWord("base:haben", "verb", "ge-core");
+		generator.generateWord("base:schlafen", "verb", "ge-core");
+		generator.generateWord("base:schlafen", "verb", "bare-core", "seam1");
+		generator.generateWord("base:schlafen", "verb", "bare-core", "seam2");
+		generator.generateWord("base:schlafen", "verb", "bare-core", "seam3");
+		generator.generateWord("base:schlafen", "verb", "bare-core", "seam4");
+		generator.generateWord("base:schlafen", "verb", "bare-core", "seam5");
+		generator.generateWord("base:schlafen", "verb", "te-core", "seam1");
+		generator.generateWord("base:schlafen", "verb", "te-core", "seam2");
+		generator.generateWord("base:schlafen", "verb", "te-core", "seam3");
+		generator.generateWord("base:schlafen", "verb", "te-core", "seam4");
+		generator.generateWord("base:schlafen", "verb", "te-core", "seam5");
 	}
 	
 }

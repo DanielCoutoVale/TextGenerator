@@ -1,20 +1,55 @@
 
-hab base:haben bare-aspect long
-ha base:haben bare-aspect short
-hab base:haben ge-aspect
-hat base:haben te-aspect
+base:haben
+hab - bare-aspect long
+ha - bare-aspect short
+hab - ge-aspect
+hat - te-aspect
 
-sag base:sagen bare-aspect long
-sag base:sagen bare-aspect short
-sag base:sagen te-aspect
-sag base:sagen ge-aspect
+base:sagen
+sag - bare-aspect long
+sag - bare-aspect short
+sag - te-aspect
+sag - ge-aspect
 
-e e-leaf
-st st-leaf
-t t-leaf
-en n-leaf long
-n n-leaf short
+base:tun tun-type
+tu - bare-aspect long
+tu - bare-aspect short
+ta - ge-aspect
+ta - te-aspect
 
-ge ge-branch
-t n-branch
-te te-branch
+base:schlafen laden-type
+schlaf - bare-aspect long
+schläf - bare-aspect short
+schlief - te-aspect
+schlaf - ge-aspect
+
+base:schlafen ieren-type
+studier - bare-aspect long 
+studier - bare-aspect short
+studier - te-aspect
+studier - ge-aspect
+
+e-leaf
+e
+
+st-leaf
+st 
+
+t-leaf
+t
+
+n-leaf
+en - long
+n - short
+
+ge-branch
+ge 
+
+n-branch
+t - plosive
+n - nasal short
+en - nasal long
+
+te-branch
+te - long
+t - short

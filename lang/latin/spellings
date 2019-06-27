@@ -1,10 +1,22 @@
 
-domin base:dominus
-serv base:servus
-judex base:judex open
-judic base:judex closed
+base:dominus
+domin
 
-us us-branch
-um um-branch
-ī ī-branch
-ōs ōs-branch
+base:servus
+serv
+
+base:judex
+judex - open
+judic - closed
+
+us-branch
+us
+
+um-branch
+um
+
+ī-branch
+ī
+
+ōs-branch
+ōs

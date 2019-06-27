@@ -13,6 +13,7 @@ verb and ge-core
 - classify the Branch1 as branch
 - lexify the Branch1 as ge-branch
 - classify the Branch2 as branch
+- classify the Branch2 as n-branch
 - lexify the Branch2 as n-branch
 - place the Branch1 before the Core
 - place the Core before the Branch2
@@ -31,6 +32,7 @@ verb and te-core
 - classify the Stem as te-aspect
 - expand the Core with a Branch
 - classify the Branch as branch
+- classify the Branch as te-branch
 - lexify the Branch as te-branch
 - place the Core before the Branch
 
@@ -103,6 +105,12 @@ stem and bare-aspect and (seam2 or seam3)
 
 branch
 - prepare substance
+
+branch and n-branch
+- mould substance as plosive
+
+branch and te-branch
+- mould substance as long
 
 leaf
 - log that the unit # is a leaf

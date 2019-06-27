@@ -18,22 +18,28 @@ public class Moulder {
 	
 	private Map<String, String> map2;
 	
+	private Map<String, List<String>> featureMap;
+	
 	public Moulder() {
 	}
 	
 	public Moulder(String fileName) throws IOException {
+		featureMap = new HashMap<>();
 		load(new FileInputStream(fileName));
 	}
 	
 	public Moulder(File file) throws IOException {
+		featureMap = new HashMap<>();
 		load(new FileInputStream(file));
 	}
 	
 	public Moulder(InputStream is) throws IOException {
+		featureMap = new HashMap<>();
 		load(is);
 	}
 	
 	public Moulder(File[] files) throws IOException {
+		featureMap = new HashMap<>();
 		for (File file : files) {
 			load(new FileInputStream(file));
 		}
@@ -44,12 +50,23 @@ public class Moulder {
 		BufferedReader br = new BufferedReader(isr);
 		String line;
 		while (null != (line = br.readLine())) {
+			if (line.length() == 0) continue;
 			String[] tokens = line.split(" ");
-			String literal = tokens[0].intern();
+			String lex = tokens[0].intern();
 			List<String> features = new LinkedList<>(Arrays.asList(tokens));
 			features.remove(0);
-			features.sort((a, b) -> a.compareTo(b));
-			put(literal, 0, features.toArray(new String[0]));
+			featureMap.put(lex, features);
+			while (null != (line = br.readLine())) {
+				if (line.length() == 0) break;
+				tokens = line.split(" ");
+				String form = tokens[0].intern();
+				features = new LinkedList<>(Arrays.asList(tokens));
+				features.remove(0);
+				if (features.size() > 0) features.remove(0);
+				features.add(lex);
+				features.sort((a, b) -> a.compareTo(b));
+				put(form, 0, features.toArray(new String[0]));
+			}
 		}
 		br.close();
 	}
