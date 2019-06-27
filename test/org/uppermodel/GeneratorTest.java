@@ -6,10 +6,7 @@ import java.util.Map;
 
 import org.junit.Test;
 import org.uppermodel.Generator;
-import org.uppermodel.theory.AssociationMap;
 import org.uppermodel.theory.LinearStructure;
-import org.uppermodel.theory.Stratum;
-import org.uppermodel.theory.Structure;
 import org.uppermodel.theory.Unit;
 
 public class GeneratorTest {
