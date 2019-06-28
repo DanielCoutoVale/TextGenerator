@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.Set;
 
 import org.uppermodel.Inquirer;
+import org.uppermodel.Moulder;
 
 public class DecisionScript {
 	
@@ -73,7 +74,7 @@ public class DecisionScript {
 		this.nodes.add(map);
 	}
 
-	public final Set<String> execute(System system, AssociationMap associationMap, Inquirer inquirer) {
+	public final Set<String> execute(System system, AssociationMap associationMap, Inquirer inquirer, Moulder moulder) {
 		Set<String> features = new HashSet<>();
 		for (DecisionNode node : nodes) {
 			if (node instanceof DecisionAtom) {
@@ -81,7 +82,7 @@ public class DecisionScript {
 				atom.execute(system, associationMap, inquirer);
 			} else {
 				DecisionMap map = (DecisionMap) node;
-				map.execute(system, associationMap, inquirer);
+				map.execute(system, associationMap, inquirer, moulder);
 			}
 		}
 		return features;

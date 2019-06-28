@@ -13,10 +13,13 @@ public class Traverser {
 	private final SystemNetwork network;
 	
 	private final Inquirer inquirer;
+
+	private Moulder moulder;
 	
-	public Traverser(SystemNetwork network, Inquirer inquirer) {
+	public Traverser(SystemNetwork network, Inquirer inquirer, Moulder moulder) {
 		this.network = network;
 		this.inquirer = inquirer;
+		this.moulder = moulder;
 	}
 	
 	public final void traverse(AssociationMap associationMap) {
@@ -26,7 +29,7 @@ public class Traverser {
 		do {
 			for (System system : systems) {
 				if (system.enterable(unit.features)) {
-					system.executeScript(associationMap, this.inquirer);
+					system.executeScript(associationMap, this.inquirer, this.moulder);
 					entered.add(system);
 				}
 			}

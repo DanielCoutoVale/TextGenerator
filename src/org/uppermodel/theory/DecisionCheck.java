@@ -4,6 +4,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 import org.uppermodel.Inquirer;
+import org.uppermodel.Moulder;
 
 public class DecisionCheck {
 	
@@ -11,13 +12,18 @@ public class DecisionCheck {
 	private static final String AN = "an".intern();
 	private static final String IF = "if".intern();
 	private static final String IS = "is".intern();
+	private static final String ITEM = "item".intern();
 	private static final String OTHERWISE = "otherwise".intern();
 	private static final String THE = "the".intern();
 	
 	public static enum Type {
-		classAttribute, otherwise
+		classAttribute, otherwise, itemClassAttribute
 	}
 
+	private final String[] itemClassAttribute1 = {IF, null, IS, null, ITEM};
+	private final String[] itemClassAttribute2 = {IF, THE, null, IS, A, null, ITEM};
+	private final String[] itemClassAttribute3 = {IF, THE, null, IS, AN, null, ITEM};
+	
 	private final String[] classAttribute1 = {IF, null, IS, null};
 	private final String[] classAttribute2 = {IF, THE, null, IS, A, null};
 	private final String[] classAttribute3 = {IF, THE, null, IS, AN, null};
@@ -25,6 +31,7 @@ public class DecisionCheck {
 	private final String[] otherwise1 = {OTHERWISE};
 	
 	private final String[][] statementPatterns = {
+			itemClassAttribute1, itemClassAttribute2, itemClassAttribute3,
 			classAttribute1, classAttribute2, classAttribute3,
 			otherwise1
 	};
@@ -81,6 +88,9 @@ public class DecisionCheck {
 	}
 
 	public Type type() {
+		if (matches(itemClassAttribute1)) return Type.itemClassAttribute;
+		if (matches(itemClassAttribute2)) return Type.itemClassAttribute;
+		if (matches(itemClassAttribute3)) return Type.itemClassAttribute;
 		if (matches(classAttribute1)) return Type.classAttribute;
 		if (matches(classAttribute2)) return Type.classAttribute;
 		if (matches(classAttribute3)) return Type.classAttribute;
@@ -113,8 +123,11 @@ public class DecisionCheck {
 		return buffer.toString();
 	}
 
-	public boolean execute(AssociationMap associationMap, Inquirer inquirer) {
+	public boolean execute(AssociationMap associationMap, Inquirer inquirer, Moulder moulder) {
 		switch(type()) {
+		case itemClassAttribute: {
+			return moulder.checkItemClassAttribute(associationMap, operand(0), operand(1));
+		}
 		case classAttribute: {
 			return inquirer.checkClassAttribute(associationMap, operand(0), operand(1));
 		}

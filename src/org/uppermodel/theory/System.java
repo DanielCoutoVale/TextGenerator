@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Set;
 
 import org.uppermodel.Inquirer;
+import org.uppermodel.Moulder;
 import org.uppermodel.expression.Expression;
 import org.uppermodel.expression.ExpressionTokenList;
 
@@ -30,8 +31,8 @@ public class System {
 		this.script = new DecisionScript(stratum, body);
 	}
 	
-	public final void executeScript(AssociationMap associationMap, Inquirer inquirer) {
-		Set<String> features = this.script.execute(this, associationMap, inquirer);
+	public final void executeScript(AssociationMap associationMap, Inquirer inquirer, Moulder moulder) {
+		Set<String> features = this.script.execute(this, associationMap, inquirer, moulder);
 		associationMap.getUnit(stratum).features.addAll(features);
 	}
 	

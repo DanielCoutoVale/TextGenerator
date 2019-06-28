@@ -8,6 +8,7 @@ import java.util.Map;
 import java.util.Set;
 
 import org.uppermodel.Inquirer;
+import org.uppermodel.Moulder;
 
 public class DecisionMap implements DecisionNode {
 	
@@ -70,11 +71,11 @@ public class DecisionMap implements DecisionNode {
 	}
 
 	public final void execute(System system, AssociationMap associationMap,
-			Inquirer inquirer) {
+			Inquirer inquirer, Moulder moulder) {
 		for (DecisionCheck check : checks) {
-			if (check.execute(associationMap, inquirer)) {
+			if (check.execute(associationMap, inquirer, moulder)) {
 				DecisionScript script = scriptMap.get(check);
-				script.execute(system, associationMap, inquirer);
+				script.execute(system, associationMap, inquirer, moulder);
 				return;
 			}
 		}

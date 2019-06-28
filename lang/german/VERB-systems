@@ -1,0 +1,26 @@
+
+GE-BRANCH-PRESENCE verb and ge-core
+- if the Unit is an ieren-type item
+  - choose ge-branch-absent
+- otherwise
+  - choose ge-branch-present
+
+N-BRANCH-QUALITY verb and ge-core
+- if the Unit is an schlafen-type item
+  - choose n-branch-nasal-long
+- if the Unit is a tun-type item
+  - choose n-branch-nasal-short
+- otherwise
+  - choose n-branch-plosive
+
+TE-BRANCH-PRESENCE verb and te-core
+- if the Unit is an schlafen-type item
+  - choose te-branch-absent
+- otherwise
+  - choose te-branch-present
+
+TE-BRANCH-LENGTH verb and te-core and te-branch-present
+- if the Unit is a tun-type item
+  - choose te-branch-short
+- otherwise
+  - choose te-branch-long

@@ -12,6 +12,10 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
+import org.uppermodel.theory.AssociationMap;
+import org.uppermodel.theory.Stratum;
+import org.uppermodel.theory.Unit;
+
 public class Moulder {
 	
 	private Map<String, Moulder> map1;
@@ -124,5 +128,13 @@ public class Moulder {
 	
 	public String toString() {
 		return "(" + map2 + ":" + map1 + ")";
+	}
+
+	public final boolean checkItemClassAttribute(AssociationMap associationMap, String function, String itemClass) {
+		Unit calling = associationMap.getUnit(function, Stratum.calling);
+		if (calling == null) return false;
+		List<String> features = featureMap.get(calling.id);
+		if (features == null) return false;
+		return features.contains(itemClass);
 	}
 }

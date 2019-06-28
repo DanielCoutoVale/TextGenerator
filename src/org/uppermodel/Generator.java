@@ -39,10 +39,10 @@ public class Generator {
 		Resource resource = new Resource(directoryName);
 		SystemNetwork network = new SystemNetwork(Stratum.wording, resource.getSystemFiles());
 		Inquirer inquirer = new Inquirer(Stratum.meaning, resource.getCallingFiles());
-		this.traverser = new Traverser(network, inquirer);
-		this.collector = new Collector(Stratum.wording, resource.getFeatureFiles());
 		Moulder moulder = new Moulder(resource.getSpellingFiles());
-		this.realizer = new Realizer(moulder);		
+		this.traverser = new Traverser(network, inquirer, moulder);
+		this.collector = new Collector(Stratum.wording, resource.getFeatureFiles());
+		this.realizer = new Realizer(moulder);
 	}
 
 	public Generator(Traverser traverser, Collector collector, Realizer realizer) {
@@ -250,8 +250,7 @@ public class Generator {
 		for (String feature : features) {
 			wording.features.add(feature);
 		}
-		LinearStructure calling = new LinearStructure();
-		calling.constituents.add(new Unit(base));
+		Unit calling = new Unit(base);
 		AssociationMap map = this.generate(spellingMap, speech, null, wording, calling, null, null);
 		return map.getUnit(Stratum.wording);
 	}

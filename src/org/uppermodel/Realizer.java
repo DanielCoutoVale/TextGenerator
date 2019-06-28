@@ -184,12 +184,8 @@ public class Realizer {
 				String operand1 = statement.operand(0);
 				Knob knob1 = map.get(operand1);
 				if (knob1.children.size() > 0) throw new Error();
-				LinearStructure unit = (LinearStructure) associationMap.getUnit(Stratum.calling);
-				for (Unit constituent : unit.constituents) {
-					if (constituent.id.startsWith("base:")) {
-						associationMap.setUnit(operand1, Stratum.calling, constituent);
-					}
-				}
+				Unit unit = associationMap.getUnit(Stratum.calling);
+				associationMap.setUnit(operand1, Stratum.calling, unit);
 			}
 		}
 		for (Statement statement : statements) {

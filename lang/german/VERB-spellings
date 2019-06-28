@@ -17,13 +17,13 @@ tu - bare-aspect short
 ta - ge-aspect
 ta - te-aspect
 
-base:schlafen laden-type
+base:schlafen schlafen-type
 schlaf - bare-aspect long
 schläf - bare-aspect short
 schlief - te-aspect
 schlaf - ge-aspect
 
-base:schlafen ieren-type
+base:studieren ieren-type
 studier - bare-aspect long 
 studier - bare-aspect short
 studier - te-aspect
@@ -36,7 +36,8 @@ st-leaf
 st 
 
 t-leaf
-t
+t - short
+et - long
 
 n-leaf
 n - short
