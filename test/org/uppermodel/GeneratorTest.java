@@ -128,6 +128,12 @@ public class GeneratorTest {
 		generator.generateWord("base:dīcere", "verb", "bā-branch-core", "seam4");
 		generator.generateWord("base:dīcere", "verb", "bā-branch-core", "seam5");
 		generator.generateWord("base:dīcere", "verb", "bā-branch-core", "seam6");
+		generator.generateWord("base:dīcere", "verb", "b-branch-core", "seam1");
+		generator.generateWord("base:dīcere", "verb", "b-branch-core", "seam2");
+		generator.generateWord("base:dīcere", "verb", "b-branch-core", "seam3");
+		generator.generateWord("base:dīcere", "verb", "b-branch-core", "seam4");
+		generator.generateWord("base:dīcere", "verb", "b-branch-core", "seam5");
+		generator.generateWord("base:dīcere", "verb", "b-branch-core", "seam6");
 		System.out.println();
 		generator.generateWord("base:loquī", "verb", "ō-aspect-core", "seam1");
 		generator.generateWord("base:loquī", "verb", "ō-aspect-core", "seam2");
@@ -141,6 +147,12 @@ public class GeneratorTest {
 		generator.generateWord("base:loquī", "verb", "bā-branch-core", "seam4");
 		generator.generateWord("base:loquī", "verb", "bā-branch-core", "seam5");
 		generator.generateWord("base:loquī", "verb", "bā-branch-core", "seam6");
+		generator.generateWord("base:loquī", "verb", "b-branch-core", "seam1");
+		generator.generateWord("base:loquī", "verb", "b-branch-core", "seam2");
+		generator.generateWord("base:loquī", "verb", "b-branch-core", "seam3");
+		generator.generateWord("base:loquī", "verb", "b-branch-core", "seam4");
+		generator.generateWord("base:loquī", "verb", "b-branch-core", "seam5");
+		generator.generateWord("base:loquī", "verb", "b-branch-core", "seam6");
 	}
 	
 }
