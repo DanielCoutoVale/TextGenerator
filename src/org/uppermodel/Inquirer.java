@@ -90,7 +90,12 @@ public class Inquirer {
 		for (String semanticFeature : semanticUnit.features) {
 			if (callingMap.containsKey(semanticFeature)) {
 				Set<LinearStructure> callings = callingMap.get(semanticFeature);
-				return callings.iterator().next();
+				LinearStructure calling = callings.iterator().next();
+				for (Unit constituent : calling.constituents) {
+					if (constituent.id.startsWith("base:")) {
+						return constituent;
+					}
+				}
 			}
 		}
 		throw new ExecutionError();
