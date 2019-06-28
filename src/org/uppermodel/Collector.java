@@ -29,21 +29,25 @@ public class Collector {
 	
 	public Collector(Stratum stratum, String fileName) throws IOException {
 		this.stratum = stratum;
+		this.gates = new LinkedList<>();
 		load(new FileInputStream(fileName));
 	}
 	
 	public Collector(Stratum stratum, File file) throws IOException {
 		this.stratum = stratum;
+		this.gates = new LinkedList<>();
 		load(new FileInputStream(file));
 	}
 	
 	public Collector(Stratum stratum, InputStream is) throws IOException {
 		this.stratum = stratum;
+		this.gates = new LinkedList<>();
 		load(is);
 	}
 	
 	public Collector(Stratum stratum, File[] files) throws IOException {
 		this.stratum = stratum;
+		this.gates = new LinkedList<>();
 		for (File file : files) {
 			load(new FileInputStream(file));
 		}
@@ -53,7 +57,6 @@ public class Collector {
 		InputStreamReader isr = new InputStreamReader(is);
 		BufferedReader br = new BufferedReader(isr);
 		String line;
-		gates = new LinkedList<>();
 		Gate gate = null;
 		while (null != (line = br.readLine())) {
 			line = line.trim().intern();

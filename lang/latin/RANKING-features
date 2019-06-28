@@ -1,14 +1,19 @@
 
 words
+- log that the unit # is a word
 - insert a Core
 - expand the Core with a Stem
 - classify the Stem as morphemes
+- classify the Stem as stem
 - lexify the Stem like this unit
+
+noun
+- log that the unit # is a noun
 - insert an Edge
 - expand the Edge with a Branch
 - classify the Branch as morphemes
 - lexify the Branch as us-branch
-- place the Core before the Edge
+- place the Stem before the Edge
 
 morphemes
 - prepare substance 
@@ -28,6 +33,7 @@ nexus-group
 thing-group
 - insert Thing
 - classify Thing words
+- classify Thing noun
 
 quantity-group
 - insert Quantity

@@ -1,0 +1,6 @@
+
+GE-BRANCH-PRESENCE verb
+- if the Unit is an loquī-type item
+  - choose loquī-type
+- otherwise
+  - choose dīcere-type

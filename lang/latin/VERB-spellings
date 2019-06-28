@@ -1,0 +1,66 @@
+
+base:loquī loquī-type
+loqu - ō-aspect weak short
+loqu - ō-aspect weak mid
+loqui - ō-aspect weak long
+loqui - ō-aspect strong closed
+loque - ō-aspect strong open
+locūt - ū-aspect
+
+base:dīcere dīcere-type
+dīc - ō-aspect weak short
+dīc - ō-aspect weak mid
+dīci - ō-aspect weak long
+dīci - ō-aspect strong closed
+dīce - ō-aspect strong open
+dīx - ī-aspect long
+dīx - ī-aspect short
+dict - ū-aspect
+
+bā-branch
+ā - short strong
+a - short weak
+bā - mid strong
+ba - mid weak
+ēbā - long strong
+ēba - long weak
+
+ō-leaf
+ō - sonant
+m - consonant
+
+s-leaf
+s
+
+t-leaf
+t
+
+mus-leaf
+mus
+
+tis-leaf
+tis
+
+nt-leaf
+nt - short
+unt - long
+
+or-leaf
+or - sonant
+r - consonant
+
+ris-leaf
+ris
+
+tur-leaf
+tur
+
+mur-leaf
+mur
+
+minī-leaf
+minī
+
+ntur-leaf
+ntur - short
+untur - long

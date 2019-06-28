@@ -1,0 +1,200 @@
+
+verb
+- log that the unit # is a verb
+- classify the Stem as verbal
+- insert a Seam
+- expand the Seam with a Leaf
+- classify the Leaf as morphemes
+- classify the Leaf as leaf
+- place the Core before the Seam
+
+verb and ō-aspect-core
+- log that the unit # is an ō-aspect-core verb
+- classify the Leaf as bare-stem
+
+verb and bā-branch-core
+- log that the unit # is an bā-branch-core verb
+- expand the Core with a Branch
+- classify the Branch as morphemes
+- classify the Branch as branch
+- classify the Branch as bā-branch
+- lexify the Branch as bā-branch
+- classify the Stem as bā-branch
+- classify the Leaf as bā-branch
+- place the Stem before the Branch
+
+verb and dīcere-type and ō-aspect-core and seam1
+- classify the Stem as ō-leaf
+
+verb and dīcere-type and bā-branch-core and seam1
+- classify the Branch as ō-leaf
+
+verb and dīcere-type and seam1
+- classify the Leaf as ō-leaf
+- lexify the Leaf as ō-leaf
+
+verb and dīcere-type and ō-aspect-core and seam2
+- classify the Stem as s-leaf
+
+verb and dīcere-type and bā-branch-core and seam2
+- classify the Branch as s-leaf
+
+verb and dīcere-type and seam2
+- classify the Leaf as s-leaf
+- lexify the Leaf as s-leaf
+
+verb and dīcere-type and ō-aspect-core and seam3
+- classify the Stem as t-leaf
+
+verb and dīcere-type and bā-branch-core and seam3
+- classify the Branch as t-leaf
+
+verb and dīcere-type and seam3
+- classify the Leaf as t-leaf
+- lexify the Leaf as t-leaf
+
+verb and dīcere-type and ō-aspect-core and seam4
+- classify the Stem as mus-leaf
+
+verb and dīcere-type and bā-branch-core and seam4
+- classify the Branch as mus-leaf
+
+verb and dīcere-type and seam4
+- classify the Leaf as mus-leaf
+- lexify the Leaf as mus-leaf
+
+verb and dīcere-type and ō-aspect-core and seam5
+- classify the Stem as tis-leaf
+
+verb and dīcere-type and bā-branch-core and seam5
+- classify the Branch as tis-leaf
+
+verb and dīcere-type and seam5
+- classify the Leaf as tis-leaf
+- lexify the Leaf as tis-leaf
+
+verb and dīcere-type and ō-aspect-core and seam6
+- classify the Stem as nt-leaf
+
+verb and dīcere-type and bā-branch-core and seam6
+- classify the Branch as nt-leaf
+
+verb and dīcere-type and seam6
+- classify the Leaf as nt-leaf
+- lexify the Leaf as nt-leaf
+
+verb and loquī-type and ō-aspect-core and seam1
+- classify the Stem as or-leaf
+
+verb and loquī-type and bā-branch-core and seam1
+- classify the Branch as or-leaf
+
+verb and loquī-type and seam1
+- classify the Leaf as or-leaf
+- lexify the Leaf as or-leaf
+
+verb and loquī-type and ō-aspect-core and seam2
+- classify the Stem as ris-leaf
+
+verb and loquī-type and bā-branch-core and seam2
+- classify the Branch as ris-leaf
+
+verb and loquī-type and seam2
+- classify the Leaf as ris-leaf
+- lexify the Leaf as ris-leaf
+
+verb and loquī-type and ō-aspect-core and seam3
+- classify the Stem as tur-leaf
+
+verb and loquī-type and bā-branch-core and seam3
+- classify the Branch as tur-leaf
+
+verb and loquī-type and seam3
+- classify the Leaf as tur-leaf
+- lexify the Leaf as tur-leaf
+
+verb and loquī-type and ō-aspect-core and seam4
+- classify the Stem as mur-leaf
+
+verb and loquī-type and bā-branch-core and seam4
+- classify the Branch as mur-leaf
+
+verb and loquī-type and seam4
+- classify the Leaf as mur-leaf
+- lexify the Leaf as mur-leaf
+
+verb and loquī-type and ō-aspect-core and seam5
+- classify the Stem as minī-leaf
+
+verb and loquī-type and bā-branch-core and seam5
+- classify the Branch as minī-leaf
+
+verb and loquī-type and seam5
+- classify the Leaf as minī-leaf
+- lexify the Leaf as minī-leaf
+
+verb and loquī-type and ō-aspect-core and seam6
+- classify the Stem as ntur-leaf
+
+verb and loquī-type and bā-branch-core and seam6
+- classify the Branch as ntur-leaf
+
+verb and loquī-type and seam6
+- classify the Leaf as ntur-leaf
+- lexify the Leaf as ntur-leaf
+
+stem and verbal
+- log that the unit # is a stem
+- mould substance with ō-aspect
+
+stem and ( ō-leaf or or-leaf or bā-branch )
+- mould substance as weak
+- mould substance as short
+
+stem and ( nt-leaf or ntur-leaf )
+- mould substance as weak
+- mould substance as mid
+
+stem and ( s-leaf or t-leaf )
+- mould substance as weak
+- mould substance as long
+
+stem and ( mus-leaf or tis-leaf or tur-leaf or mur-leaf or minī-leaf )
+- mould substance as strong
+- mould substance as closed
+
+stem and ris-leaf
+- mould substance as strong
+- mould substance as open
+
+branch and bā-branch and ( ō-leaf or or-leaf or nt-leaf or ntur-leaf )
+- mould substance as long
+- mould substance as weak
+
+branch and bā-branch and ( s-leaf or t-leaf or mus-leaf or tis-leaf or ris-leaf or tur-leaf or mur-leaf or minī-leaf )
+- mould substance as long
+- mould substance as strong
+
+leaf and ō-leaf and bā-branch
+- mould substance as consonant
+
+leaf and ō-leaf and bare-stem
+- mould substance as sonant
+
+leaf and or-leaf and bā-branch
+- mould substance as consonant
+
+leaf and or-leaf and bare-stem
+- mould substance as sonant
+
+leaf and nt-leaf and bā-branch
+- mould substance as short
+
+leaf and nt-leaf and bare-stem
+- mould substance as long
+
+leaf and ntur-leaf and bā-branch
+- mould substance as short
+
+leaf and ntur-leaf and bare-stem
+- mould substance as long
