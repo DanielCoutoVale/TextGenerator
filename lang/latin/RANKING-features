@@ -7,14 +7,6 @@ words
 - classify the Stem as stem
 - lexify the Stem like this unit
 
-noun
-- log that the unit # is a noun
-- insert an Edge
-- expand the Edge with a Branch
-- classify the Branch as morphemes
-- lexify the Branch as us-branch
-- place the Stem before the Edge
-
 morphemes
 - prepare substance 
 
