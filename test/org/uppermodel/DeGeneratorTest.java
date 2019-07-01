@@ -7,19 +7,8 @@ import org.junit.Test;
 public class DeGeneratorTest {
 	
 	private Generator generator;
-	
-	@Test
-	public final void test1() throws IOException {
-		generator = new Generator("lang/german");
-		generator.setLogging(false);
-		generateVerb("base:sagen");
-		generateVerb("base:haben");
-		generateVerb("base:schlafen");
-		generateVerb("base:studieren");
-		generateVerb("base:tun");
-	}
 
-	private void generateVerb(String lex) {
+	private final void generateVerb(String lex) {
 		System.out.println();
 		generator.generateWord(lex, "verb", "ge-core");
 		generator.generateWord(lex, "verb", "bare-core", "seam1");
@@ -33,18 +22,8 @@ public class DeGeneratorTest {
 		generator.generateWord(lex, "verb", "te-core", "seam4");
 		generator.generateWord(lex, "verb", "te-core", "seam5");
 	}
-	
-	@Test
-	public final void test2() throws IOException {
-		generator = new Generator("lang/german");
-		generator.setLogging(false);
-		generateEventGroup("Singing");
-		generateEventGroup("Drinking");
-		generateEventGroup("Saying");
-		generateEventGroup("Doing");
-	}
 
-	private void generateEventGroup(String lowerClass) {
+	private final void generateEventGroup(String lowerClass) {
 		System.out.println();
 		generator.generateGroup("Event", lowerClass, "non-past", "seam1");
 		generator.generateGroup("Event", lowerClass, "non-past", "seam2");
@@ -56,6 +35,31 @@ public class DeGeneratorTest {
 		generator.generateGroup("Event", lowerClass, "seam3");
 		generator.generateGroup("Event", lowerClass, "seam4");
 		generator.generateGroup("Event", lowerClass, "seam5");
+	}
+	
+	@Test
+	public final void test1() throws IOException {
+		generator = new Generator("lang/german");
+		generator.setLogging(false);
+		generateVerb("base:haben");
+		generateVerb("base:tun");
+		generateVerb("base:trinken");
+		generateVerb("base:sagen");
+		generateVerb("base:singen");
+		generateVerb("base:schlafen");
+		generateVerb("base:studieren");
+	}
+	
+	@Test
+	public final void test2() throws IOException {
+		generator = new Generator("lang/german");
+		generator.setLogging(false);
+		generateEventGroup("Doing");
+		generateEventGroup("Drinking");
+		generateEventGroup("Saying");
+		generateEventGroup("Singing");
+		generateEventGroup("Sleeping");
+		generateEventGroup("Studying");
 	}
 	
 }
