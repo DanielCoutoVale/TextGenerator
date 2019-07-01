@@ -9,7 +9,7 @@ import org.uppermodel.Generator;
 import org.uppermodel.theory.LinearStructure;
 import org.uppermodel.theory.Unit;
 
-public class GeneratorTest {
+public class LaGeneratorTest {
 	
 	private void generateThing(String tax) throws IOException {
 		generator = new Generator("lang/latin");
@@ -45,71 +45,7 @@ public class GeneratorTest {
 		generator.generate("I ate [number] {food}.", "two", "hotdog");
 	}
 
-	@Test
-	public final void test3() throws IOException {
-		generator = new Generator("lang/german");
-		generator.setLogging(false);
-		System.out.println();
-		generator.generateWord("base:sagen", "verb", "ge-core");
-		generator.generateWord("base:sagen", "verb", "bare-core", "seam1");
-		generator.generateWord("base:sagen", "verb", "bare-core", "seam2");
-		generator.generateWord("base:sagen", "verb", "bare-core", "seam3");
-		generator.generateWord("base:sagen", "verb", "bare-core", "seam4");
-		generator.generateWord("base:sagen", "verb", "bare-core", "seam5");
-		generator.generateWord("base:sagen", "verb", "te-core", "seam1");
-		generator.generateWord("base:sagen", "verb", "te-core", "seam2");
-		generator.generateWord("base:sagen", "verb", "te-core", "seam3");
-		generator.generateWord("base:sagen", "verb", "te-core", "seam4");
-		generator.generateWord("base:sagen", "verb", "te-core", "seam5");
-		System.out.println();
-		generator.generateWord("base:haben", "verb", "ge-core");
-		generator.generateWord("base:haben", "verb", "bare-core", "seam1");
-		generator.generateWord("base:haben", "verb", "bare-core", "seam2");
-		generator.generateWord("base:haben", "verb", "bare-core", "seam3");
-		generator.generateWord("base:haben", "verb", "bare-core", "seam4");
-		generator.generateWord("base:haben", "verb", "bare-core", "seam5");
-		generator.generateWord("base:haben", "verb", "te-core", "seam1");
-		generator.generateWord("base:haben", "verb", "te-core", "seam2");
-		generator.generateWord("base:haben", "verb", "te-core", "seam3");
-		generator.generateWord("base:haben", "verb", "te-core", "seam4");
-		generator.generateWord("base:haben", "verb", "te-core", "seam5");
-		System.out.println();
-		generator.generateWord("base:schlafen", "verb", "ge-core");
-		generator.generateWord("base:schlafen", "verb", "bare-core", "seam1");
-		generator.generateWord("base:schlafen", "verb", "bare-core", "seam2");
-		generator.generateWord("base:schlafen", "verb", "bare-core", "seam3");
-		generator.generateWord("base:schlafen", "verb", "bare-core", "seam4");
-		generator.generateWord("base:schlafen", "verb", "bare-core", "seam5");
-		generator.generateWord("base:schlafen", "verb", "te-core", "seam1");
-		generator.generateWord("base:schlafen", "verb", "te-core", "seam2");
-		generator.generateWord("base:schlafen", "verb", "te-core", "seam3");
-		generator.generateWord("base:schlafen", "verb", "te-core", "seam4");
-		generator.generateWord("base:schlafen", "verb", "te-core", "seam5");
-		System.out.println();
-		generator.generateWord("base:studieren", "verb", "ge-core");
-		generator.generateWord("base:studieren", "verb", "bare-core", "seam1");
-		generator.generateWord("base:studieren", "verb", "bare-core", "seam2");
-		generator.generateWord("base:studieren", "verb", "bare-core", "seam3");
-		generator.generateWord("base:studieren", "verb", "bare-core", "seam4");
-		generator.generateWord("base:studieren", "verb", "bare-core", "seam5");
-		generator.generateWord("base:studieren", "verb", "te-core", "seam1");
-		generator.generateWord("base:studieren", "verb", "te-core", "seam2");
-		generator.generateWord("base:studieren", "verb", "te-core", "seam3");
-		generator.generateWord("base:studieren", "verb", "te-core", "seam4");
-		generator.generateWord("base:studieren", "verb", "te-core", "seam5");
-		System.out.println();
-		generator.generateWord("base:tun", "verb", "ge-core");
-		generator.generateWord("base:tun", "verb", "bare-core", "seam1");
-		generator.generateWord("base:tun", "verb", "bare-core", "seam2");
-		generator.generateWord("base:tun", "verb", "bare-core", "seam3");
-		generator.generateWord("base:tun", "verb", "bare-core", "seam4");
-		generator.generateWord("base:tun", "verb", "bare-core", "seam5");
-		generator.generateWord("base:tun", "verb", "te-core", "seam1");
-		generator.generateWord("base:tun", "verb", "te-core", "seam2");
-		generator.generateWord("base:tun", "verb", "te-core", "seam3");
-		generator.generateWord("base:tun", "verb", "te-core", "seam4");
-		generator.generateWord("base:tun", "verb", "te-core", "seam5");
-	}
+
 	
 	@Test
 	public final void test4() throws IOException {

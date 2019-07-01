@@ -217,8 +217,24 @@ public class DecisionAtom implements DecisionNode {
 			}
 			break;
 		}
-		case defaultOption:
+		case defaultOption: {
+			Unit unit = associationMap.getUnit(stratum);
+			Set<String> features = system.getFeatures();
+			String operand = operand(0);
+			Set<String> common = new HashSet<>(features);
+			common.retainAll(unit.features);
+			if (common.size() == 1) {
+				operand = common.iterator().next();
+			}
+			for (String feature : features) {
+				if (feature.equals(operand)) {
+					unit.features.add(feature);
+				} else {
+					unit.features.add(feature + "#complement");
+				}
+			}
 			break;
+		}
 		case allOptions:
 			break;
 		case resolveName: {

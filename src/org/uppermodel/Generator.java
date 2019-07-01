@@ -1,6 +1,7 @@
 package org.uppermodel;
 
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
@@ -51,8 +52,9 @@ public class Generator {
 		this.realizer = realizer;
 	}
 	
-	public Unit generate(Map<Unit, Unit> spellingMap, Unit speech, Unit meaning) {
+	public Unit generate(Map<Unit, Unit> spellingMap, Unit speech, Unit meaning, String... features) {
 		Unit wording = new Unit();
+		wording.features.addAll(Arrays.asList(features));
 		AssociationMap map = generate(spellingMap, speech, meaning, wording, null, null, null);
 		return map.getUnit(Stratum.wording);
 	}
@@ -69,6 +71,8 @@ public class Generator {
 		this.traverser.traverse(associationMap);
 		this.collector.collect(associationMap);
 		this.realizer.realize(associationMap);
+		associationMap.toString();
+		//System.out.println(associationMap);
 		wording = associationMap.getUnit(Stratum.wording);
 		if (wording instanceof Structure) {
 			Structure structure = (Structure) wording;
@@ -257,6 +261,34 @@ public class Generator {
 
 	public void setLogging(boolean logging) {
 		this.realizer.setLogging(logging);
+	}
+
+	public final void generateGroupInline(String upperClass, String lowerClass, String... features) {
+		System.out.print(generateGroupAsString(upperClass, lowerClass, features));
+	}
+
+	public final void generateGroup(String upperClass, String lowerClass, String... features) {
+		System.out.println(generateGroupAsString(upperClass, lowerClass, features));
+	}
+
+	private final String generateGroupAsString(String upperClass, String lowerClass, String... features) {
+		Map<Unit, Unit> spellingMap = new HashMap<>();
+		LinearStructure wording = generateGroupAsWording(spellingMap, upperClass, lowerClass, features);
+		return wording.toString(spellingMap);
+	}
+
+	private LinearStructure generateGroupAsWording(Map<Unit, Unit> spellingMap, String upperClass, String lowerClass,
+			String... features) {
+		Unit speech = Generator.newSpeech();
+		Unit meaning = new Unit();
+		meaning.features.add(upperClass);
+		meaning.features.add(lowerClass);
+		LinearStructure wording = (LinearStructure) this.generate(spellingMap, speech, meaning, features);
+		return wording;
+	}
+
+	public final String toNetworkDescription() {
+		return this.traverser.toNetworkDescription();
 	}
 	
 }

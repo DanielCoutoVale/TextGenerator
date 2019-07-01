@@ -33,16 +33,17 @@ public class Inquirer {
 		InputStreamReader isr = new InputStreamReader(is);
 		BufferedReader br = new BufferedReader(isr);
 		String line;
-		
 		while (null != (line = br.readLine())) {
 			line = line.trim();
 			if (line.length() == 0) continue;
 			String[] tokens = line.split(" ");
+			if (tokens.length < 2) continue;
 			String tax = tokens[0];
 			LinearStructure calling = new LinearStructure(tax);
 			for (int i = 1; i < tokens.length; i++) {
 				String lex = tokens[i];
-				calling.constituents.add(new Unit(lex));
+				Unit constituent = new Unit(lex);
+				calling.constituents.add(constituent);
 			}
 			this.addCalling(tax, calling);			
 		}

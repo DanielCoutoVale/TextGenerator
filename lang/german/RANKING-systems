@@ -1,0 +1,52 @@
+
+RANK wording
+- treat the sayer of the Speech as a SpeechSayer
+- treat the addressee of the Speech as a SpeechAddressee
+- if the Unit is an Exchange
+  - treat the Unit as an Exchange
+  - treat the polarity of the Exchange as a Polarity
+  - choose clauses
+- otherwise
+  - if the Unit is an item
+    - choose words or morphemes
+    - choose words by default
+  - otherwise
+    - choose groups-phrases
+
+GROUP-PHRASE-CLASS groups-phrases
+- if the Unit is a RelativeCircumstance
+  - treat the operator of the Unit as an Operator
+  - treat the operand of the Unit as an Operand
+  - choose phrase
+- otherwise
+  - choose groups
+
+GROUP-CLASS groups
+- if the Unit is a Nexus
+  - treat the Unit as a Nexus
+  - resolve the name of the Nexus
+  - choose nexus-group
+- if the Unit is a Relation
+  - treat the Unit as a Relation
+  - resolve the name of the Relation
+  - choose relation-group
+- if the Unit is a Circumstance
+  - treat the Unit as a Circumstance
+  - resolve the name of the Circumstance
+  - choose circumstance-group
+- if the Unit is a Quality
+  - treat the Unit as a Quality
+  - resolve the name of the Quality
+  - choose quality-group
+- if the Unit is a Quantity
+  - treat the Unit as a Quantity
+  - resolve the name of the Quantity
+  - choose quantity-group
+- if the Unit is an Event
+  - treat the Unit as an Event
+  - resolve the name of the Event
+  - choose event-group
+- if the Unit is a Thing
+  - treat the Unit as a Thing
+  - resolve the name of the Thing
+  - choose thing-group

@@ -1,0 +1,57 @@
+
+morphemes
+- log that the unit # is a morpheme
+- prepare substance
+
+phrase
+- log that the unit # is a phrase
+- insert MinorProcess
+- insert MinorRange
+- classify MinorProcess groups-phrases
+- classify MinorProcess groups
+- classify MinorProcess relation-group
+- classify MinorRange groups-phrases
+- classify MinorRange groups
+- classify MinorRange thing-group
+
+quality-group
+- log that the unit # is a quality-group
+- insert Quality
+- classify Quality words
+- classify Quality adjective
+
+nexus-group
+- log that the unit # is a nexus-group
+- insert Nexus
+- classify Nexus words
+- classify Nexus conjunction
+
+thing-group
+- log that the unit # is an thing-group
+- insert Thing
+- classify Thing words
+- classify Thing noun
+
+quantity-group
+- log that the unit # is an quantity-group
+- insert Quantity
+- classify Quantity words
+- classify Quantity numeral
+
+circumstance-group
+- log that the unit # is an circumstance-group
+- insert Circumstance
+- classify Circumstance words
+- classify Circumstance adverb
+
+relation-group
+- log that the unit # is an relation-group
+- insert Relation
+- classify Relation words
+- classify Relation preposition
+
+event-group
+- log that the unit # is an event-group
+- insert an Event
+- classify the Event as words
+- classify the Event as verb

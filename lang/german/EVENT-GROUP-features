@@ -1,0 +1,60 @@
+
+event-group and non-past
+- log that the unit # is a present event-group
+- insert a Tense
+- conflate the Tense with the Event
+- inflectify the Tense as bare-core
+
+event-group and simple-past
+- log that the unit # is a simple-past event-group
+- insert a Tense
+- conflate the Tense with the Event
+- inflectify the Tense as te-core
+
+event-group and compound-past
+- log that the unit # is a compound-past event-group
+- insert a TenseAuxiliary
+- insert a TenseGerund
+- conflate the TenseGerund with the Event
+- inflectify the TenseGerund as ge-core
+- classify the TenseAuxiliary as verb
+- classify the TenseAuxiliary as bare-core
+- place the TenseGerund before the TenseAuxiliary
+
+event-group and sein-past
+- log that the unit # is a sein-past event-group
+- lexify the TenseAuxiliary as base:sein
+
+event-group and haben-past
+- log that the unit # is a haben-past event-group
+- lexify the TenseAuxiliary as base:haben
+
+event-group and seam1 and compound-past
+- classify the TenseAuxiliary as seam1
+
+event-group and seam2 and compound-past
+- classify the TenseAuxiliary as seam2
+
+event-group and seam3 and compound-past
+- classify the TenseAuxiliary as seam3
+
+event-group and seam4 and compound-past
+- classify the TenseAuxiliary as seam4
+
+event-group and seam5 and compound-past
+- classify the TenseAuxiliary as seam5
+
+event-group and seam1 and ( simple-past or non-past )
+- classify the Tense as seam1
+
+event-group and seam2 and ( simple-past or non-past )
+- classify the Tense as seam2
+
+event-group and seam3 and ( simple-past or non-past )
+- classify the Tense as seam3
+
+event-group and seam4 and ( simple-past or non-past )
+- classify the Tense as seam4
+
+event-group and seam5 and ( simple-past or non-past )
+- classify the Tense as seam5

@@ -1,4 +1,16 @@
 
+STRAND verb
+- if the Unit is a tun-type item
+  - choose u-strand
+- if the Unit is a feiern-type item
+  - choose r-strand
+- if the Unit is a labeln-type item
+  - choose l-strand
+- if the Unit is a arbeiten-type item
+  - choose t-strand
+- otherwise
+  - choose hard-strand
+
 GE-BRANCH-PRESENCE verb and ge-core
 - if the Unit is an ieren-type item
   - choose ge-branch-absent

@@ -36,4 +36,8 @@ public class Traverser {
 		} while (systems.removeAll(entered));
 	}
 	
+	public final String toNetworkDescription() {
+		return this.network.toDescription();
+	}
+	
 }

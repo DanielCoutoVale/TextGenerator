@@ -2,6 +2,7 @@
 words
 - insert a Core
 - expand the Core with a Stem
+- classify the Stem as morphemes
 - classify the Stem as stem
 - lexify the Stem like this unit
 
@@ -9,6 +10,7 @@ verb and ge-core
 - log that the unit # is a ge-core verb
 - classify the Stem as ge-aspect
 - expand the Core with a Branch2
+- classify the Branch2 as morphemes
 - classify the Branch2 as branch
 - classify the Branch2 as n-branch
 - lexify the Branch2 as n-branch
@@ -16,6 +18,7 @@ verb and ge-core
 
 verb and ge-core and ge-branch-present
 - expand the Core with a Branch1
+- classify the Branch1 as morphemes
 - classify the Branch1 as branch
 - lexify the Branch1 as ge-branch
 - place the Branch1 before the Stem
@@ -31,11 +34,12 @@ verb and ge-core and n-branch-nasal-long
 
 verb and bare-core
 - log that the unit # is a bare-core verb
-- classify the Stem as bare-aspect
+- classify the Stem as e-aspect
 - insert an Seam
 - expand the Seam with a Leaf
+- classify the Leaf as morphemes
 - classify the Leaf as leaf
-- classify the Leaf as bare-stem
+- classify the Leaf as unbranched
 - place the Core before the Seam
 
 verb and te-core
@@ -44,6 +48,7 @@ verb and te-core
 
 verb and te-core and te-branch-present
 - expand the Core with a Branch
+- classify the Branch as morphemes
 - classify the Branch as branch
 - classify the Branch as te-branch
 - lexify the Branch as te-branch
@@ -58,11 +63,13 @@ verb and te-core and te-branch-long
 verb and te-core and ( seam2 or seam4 or seam5 )
 - insert an Seam
 - expand the Seam with a Leaf
+- classify the Leaf as morphemes
 - classify the Leaf as leaf
 - classify the Leaf as te-branch
 - place the Core before the Seam
 
 verb and te-core and te-branch-absent and ( seam2 or seam4 or seam5 )
+- log that the unit # is a te-branch-absent te-core verb
 - classify the Leaf as te-branch-absent
 
 verb and te-core and te-branch-long and ( seam2 or seam4 or seam5 )
@@ -70,6 +77,26 @@ verb and te-core and te-branch-long and ( seam2 or seam4 or seam5 )
 
 verb and te-core and te-branch-short and ( seam2 or seam4 or seam5 )
 - classify the Leaf as te-branch-short
+
+verb and bare-core and u-strand
+- log that the unit # is a u-strand verb
+- classify the Leaf as u-strand
+
+verb and bare-core and r-strand
+- log that the unit # is a r-strand verb
+- classify the Leaf as r-strand
+
+verb and bare-core and l-strand
+- log that the unit # is a l-strand verb
+- classify the Leaf as l-strand
+
+verb and bare-core and t-strand
+- log that the unit # is a t-strand verb
+- classify the Leaf as t-strand
+
+verb and bare-core and hard-strand
+- log that the unit # is a hard-strand verb
+- classify the Leaf as hard-strand
 
 verb and bare-core and seam1
 - log that the unit # is a seam1 stem
@@ -111,7 +138,6 @@ verb and bare-core and seam5
 
 stem
 - log that the unit # is a stem
-- prepare substance
 
 stem and te-aspect
 - log that the unit # is a te-aspect stem
@@ -121,54 +147,58 @@ stem and ge-aspect
 - log that the unit # is a ge-aspect stem
 - mould substance as ge-aspect
 
-stem and bare-aspect
-- log that the unit # is a bare-aspect stem
-- mould substance as bare-aspect
+stem and e-aspect
+- log that the unit # is a e-aspect stem
+- mould substance as e-aspect
 
-stem and bare-aspect and (seam1 or seam4 or seam5)
+stem and e-aspect and (seam1 or seam4 or seam5)
 - log that the unit # is a long stem
 - mould substance as long
 
-stem and bare-aspect and (seam2 or seam3)
+stem and e-aspect and (seam2 or seam3)
 - log that the unit # is a short stem
 - mould substance as short
 
 branch
-- prepare substance
+- log that the unit # is a branch
 
 branch and n-branch and n-branch-plosive
+- log that the unit # is a plosive n-branch branch
 - mould substance as plosive
 
 branch and n-branch and n-branch-nasal-short
+- log that the unit # is a nasal short n-branch branch
 - mould substance as nasal
 - mould substance as short
 
 branch and n-branch and n-branch-nasal-long
+- log that the unit # is a nasal long n-branch branch
 - mould substance as nasal
 - mould substance as long
 
 branch and te-branch and te-branch-long
+- log that the unit # is a long te-branch branch
 - mould substance as long
 
 branch and te-branch and te-branch-short
+- log that the unit # is a short te-branch branch
 - mould substance as short
 
 leaf
 - log that the unit # is a leaf
-- prepare substance
 
-leaf and t-leaf and ( te-branch-short or te-branch-absent )
-- log that the unit # is a n-leaf leaf
+leaf and t-leaf and te-branch-short
+- log that the unit # is a long t-leaf leaf
 - mould substance as long
 
-leaf and t-leaf and ( bare-stem or te-branch-long )
-- log that the unit # is a n-leaf leaf for a long te-branch
+leaf and t-leaf and ( unbranched or te-branch-long or te-branch-absent )
+- log that the unit # is a short t-leaf leaf
 - mould substance as short
 
-leaf and n-leaf and ( bare-stem or te-branch-short or te-branch-absent )
-- log that the unit # is a n-leaf leaf
+leaf and n-leaf and ( te-branch-short or te-branch-absent or ( hard-strand and unbranched ) )
+- log that the unit # is a long n-leaf leaf
 - mould substance as long
 
-leaf and n-leaf and te-branch-long
-- log that the unit # is a n-leaf leaf for a long te-branch
+leaf and n-leaf and ( te-branch-long or ( u-strand and unbranched ) )
+- log that the unit # is a short n-leaf leaf
 - mould substance as short

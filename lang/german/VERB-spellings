@@ -1,31 +1,43 @@
 
 base:haben
-hab - bare-aspect long
-ha - bare-aspect short
+hab - e-aspect long
+ha - e-aspect short
 hab - ge-aspect
 hat - te-aspect
 
+base:singen schlafen-type
+sing - e-aspect long
+sing - e-aspect short
+sung - ge-aspect
+sang - te-aspect
+
+base:trinken schlafen-type
+trink - e-aspect long
+trink - e-aspect short
+trunk - ge-aspect
+trank - te-aspect
+
 base:sagen
-sag - bare-aspect long
-sag - bare-aspect short
+sag - e-aspect long
+sag - e-aspect short
 sag - te-aspect
 sag - ge-aspect
 
 base:tun tun-type
-tu - bare-aspect long
-tu - bare-aspect short
+tu - e-aspect long
+tu - e-aspect short
 ta - ge-aspect
 ta - te-aspect
 
 base:schlafen schlafen-type
-schlaf - bare-aspect long
-schläf - bare-aspect short
+schlaf - e-aspect long
+schläf - e-aspect short
 schlief - te-aspect
 schlaf - ge-aspect
 
 base:studieren ieren-type
-studier - bare-aspect long 
-studier - bare-aspect short
+studier - e-aspect long 
+studier - e-aspect short
 studier - te-aspect
 studier - ge-aspect
 
