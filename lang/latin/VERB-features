@@ -10,7 +10,7 @@ verb
 
 verb and ō-aspect-core
 - log that the unit # is an ō-aspect-core verb
-- classify the Leaf as bare-stem
+- classify the Leaf as unbranched
 
 verb and ( bā-branch-core or b-branch-core or ē-branch-core )
 - log that the unit # is a branch-core verb
@@ -217,23 +217,23 @@ branch and ē-branch and ( s-leaf or mus-leaf or tis-leaf or ris-leaf or tur-lea
 leaf and ō-leaf and ( bā-branch or b-branch or ē-branch )
 - mould substance as consonant
 
-leaf and ō-leaf and bare-stem
+leaf and ō-leaf and unbranched
 - mould substance as sonant
 
 leaf and or-leaf and ( bā-branch or b-branch or ē-branch )
 - mould substance as consonant
 
-leaf and or-leaf and bare-stem
+leaf and or-leaf and unbranched
 - mould substance as sonant
 
 leaf and nt-leaf and ( bā-branch or b-branch or ē-branch )
 - mould substance as short
 
-leaf and nt-leaf and bare-stem
+leaf and nt-leaf and unbranched
 - mould substance as long
 
 leaf and ntur-leaf and ( bā-branch or b-branch or ē-branch )
 - mould substance as short
 
-leaf and ntur-leaf and bare-stem
+leaf and ntur-leaf and unbranched
 - mould substance as long
