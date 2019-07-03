@@ -70,6 +70,7 @@ public class Generator {
 		wording.features.add("wording");
 		this.traverser.traverse(associationMap);
 		this.collector.collect(associationMap);
+		//System.out.println(associationMap);
 		this.realizer.realize(associationMap);
 		associationMap.toString();
 		//System.out.println(associationMap);

@@ -17,10 +17,12 @@ phrase
 quality-group
 - insert Quality
 - classify Quality words
+- classify Quality adjective
 
 nexus-group
 - insert Nexus
 - classify Nexus words
+- classify Nexus conjunction
 
 thing-group
 - insert Thing
@@ -30,15 +32,19 @@ thing-group
 quantity-group
 - insert Quantity
 - classify Quantity words
+- classify Quantity numeral
 
 circumstance-group
 - insert Circumstance
 - classify Circumstance words
+- classify Circumstance adverbial
 
 relation-group
 - insert Relation
 - classify Relation words
+- classify Relation preposition
 
 event-group
 - insert Event
 - classify Event words
+- classify Event verb

@@ -4,3 +4,15 @@ GE-BRANCH-PRESENCE verb
   - choose loquī-type
 - otherwise
   - choose dīcere-type
+
+STRAND verb
+- if the Unit is an s-strand item
+  - choose s-strand
+- otherwise
+  - choose hard-strand
+
+REGULARITY stem
+- if the Unit is an s-strand item
+  - choose s-irregular
+- otherwise
+  - choose regular

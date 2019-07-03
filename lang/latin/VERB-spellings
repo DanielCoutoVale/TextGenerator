@@ -1,5 +1,5 @@
 
-base:loquī loquī-type
+base:loquī loquī-type hard-strand
 loqu - ō-aspect weak short
 loqu - ō-aspect weak mid
 loqui - ō-aspect weak long
@@ -7,7 +7,7 @@ loqui - ō-aspect strong closed
 loque - ō-aspect strong open
 locūt - ū-aspect
 
-base:dīcere dīcere-type
+base:dīcere dīcere-type hard-strand
 dīc - ō-aspect weak short
 dīc - ō-aspect weak mid
 dīci - ō-aspect weak long
@@ -16,6 +16,16 @@ dīce - ō-aspect strong open
 dīx - ī-aspect long
 dīx - ī-aspect short
 dict - ū-aspect
+
+base:esse s-strand
+su - ō-aspect non-sonant long
+s - ō-aspect non-sonant short
+e - ō-aspect sonant short
+es - ō-aspect sonant long sibilant
+er - ō-aspect sonant long rhotic
+fu - ī-aspect long
+fu - ī-aspect short
+fut - ū-aspect
 
 bā-branch
 ā - short strong
@@ -82,3 +92,39 @@ minī
 ntur-leaf
 ntur - short
 untur - long
+
+a-am-leaf
+a
+
+um-um-leaf
+um
+
+us-um-leaf
+us
+
+ae-ās-leaf
+ae
+
+a-a-leaf
+a
+
+ī-ōs-leaf
+ī
+
+ī-leaf
+ī
+
+istī-leaf
+istī
+
+it-leaf
+it
+
+imus-leaf
+imus
+
+istis-leaf
+istis
+
+ērunt-leaf
+ērunt
