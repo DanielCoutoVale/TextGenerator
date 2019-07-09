@@ -1,10 +1,8 @@
 
-event-group and past
-- log that the unit # is a past event group
-- insert an OST
-
 event-group and simple-past
 - log that the unit # is a simple past event group
+- log that the unit ###E is a simple past event group
+- insert an OST
 - insert a Tense
 - conflate the Tense with the OST
 - conflate the Tense with the Event
@@ -12,51 +10,66 @@ event-group and simple-past
 
 event-group and compound-past
 - log that the unit # is a compound past event group
-- insert a TenseAuxiliary
-- conflate the TenseAuxiliary with the OST
-- classify the TenseAuxiliary as words
-- classify the TenseAuxiliary as verb
-- lexify the TenseAuxiliary as base:esse
-- inflectify the TenseAuxiliary as ō-aspect-core
+- log that the unit ## is a simple past event group
+- log that the unit ###E is a simple past event group
 - insert an AUMUS
 - insert a TenseGerund
 - conflate the TenseGerund with the AUMUS
 - conflate the TenseGerund with the Event
-- inflectify the TenseGerund as ū-aspect
-- place the TenseGerund before the TenseAuxiliary
+- inflectify the TenseGerund as ū-aspect-core
+- insert a OST
+- insert a TenseAuxiliary
+- conflate the TenseAuxiliary with the OST
+- place the TenseAuxiliary before the TenseGerund
+- classify the TenseAuxiliary as words
+- classify the TenseAuxiliary as verb
+- lexify the TenseAuxiliary as base:esse
+- inflectify the TenseAuxiliary as ō-aspect-core
 
 event-group and seam1 and ost
+- log that the unit # has an ost seam 1
 - classify the OST as seam1
 
 event-group and seam2 and ost
+- log that the unit # has an ost seam 2
 - classify the OST as seam2
 
 event-group and seam3 and ost
+- log that the unit # has an ost seam 3
 - classify the OST as seam3
 
 event-group and seam4 and ost
+- log that the unit # has an ost seam 4
 - classify the OST as seam4
 
 event-group and seam5 and ost
+- log that the unit # has an ost seam 5
 - classify the OST as seam5
 
 event-group and seam6 and ost
+- log that the unit # has an ost seam 6
 - classify the OST as seam6
 
 event-group and seamA and aumus
+- log that the unit # has an aumus seam A
 - classify the AUMUS as seamA
 
 event-group and seamB and aumus
+- log that the unit # has an aumus seam B
 - classify the AUMUS as seamB
 
 event-group and seamC and aumus
+- log that the unit # has an aumus seam C
 - classify the AUMUS as seamC
 
 event-group and seamD and aumus
+- log that the unit # has an aumus seam D
 - classify the AUMUS as seamD
 
 event-group and seamE and aumus
+- log that the unit # has an aumus seam E
 - classify the AUMUS as seamE
 
 event-group and seamF and aumus
 - classify the AUMUS as seamF
+- log that the unit # has an aumus seam F

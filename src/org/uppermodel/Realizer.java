@@ -38,6 +38,7 @@ public class Realizer {
 	public final void realize(AssociationMap associationMap) {
 		Unit wording = associationMap.getUnit(Stratum.wording);
 		Unit calling = associationMap.getUnit(Stratum.calling);
+		Unit meaning = associationMap.getUnit(Stratum.meaning);
 		List<Statement> statements = wording.statements;
 		
 		// Logging
@@ -48,6 +49,14 @@ public class Realizer {
 					if (i != 0) System.out.print(" ");
 					String operand = statement.operand(i);
 					if (operand.equals("#")) operand = wording.id;
+					if (operand.equals("#E")) operand = wording.features.toString();
+					if (operand.equals("#U")) operand = wording.functions.toString();
+					if (operand.equals("##")) operand = (calling != null)? "##" + calling.id : "##";
+					if (operand.equals("##E")) operand = (calling != null)? calling.features.toString() : "[]";
+					if (operand.equals("##U")) operand = (calling != null)? calling.functions.toString() : "[]";
+					if (operand.equals("###")) operand = (meaning != null)? "###" + meaning.id : "###";
+					if (operand.equals("###E")) operand = (meaning != null)? meaning.features.toString() : "[]";
+					if (operand.equals("###U")) operand = (meaning != null)? meaning.functions.toString() : "[]";
 					System.out.print(operand);
 				}
 				System.out.println();
@@ -166,8 +175,15 @@ public class Realizer {
 		}
 		appendOrderings(structure, prefix, remainder, iUnit, fUnit, oPairs, pPairs);
 		for (Unit constituent : structure.constituents) {
+			Unit subcalling = null;
 			for (String function : constituent.functions) {
 				associationMap.setUnit(function, Stratum.wording, constituent);
+				if (subcalling == null) subcalling = associationMap.getUnit(function, Stratum.calling);
+			}
+			if (subcalling != null) {
+				for (String function : constituent.functions) {
+					associationMap.setUnit(function, Stratum.calling, subcalling);
+				}
 			}
 		}
 		for (Statement statement : statements) {
@@ -176,7 +192,11 @@ public class Realizer {
 				String operand2 = statement.operand(1);
 				Knob knob1 = map.get(operand1);
 				if (knob1.children.size() > 0) throw new Error();
-				associationMap.setUnit(operand1, Stratum.calling, new Unit(operand2));
+				Unit subwording = associationMap.getUnit(operand1, Stratum.wording);
+				Unit subcalling = new Unit(operand2);
+				for (String function : subwording.functions) {
+					associationMap.setUnit(function, Stratum.calling, subcalling);
+				}
 			}
 		}
 		for (Statement statement : statements) {
@@ -184,8 +204,11 @@ public class Realizer {
 				String operand1 = statement.operand(0);
 				Knob knob1 = map.get(operand1);
 				if (knob1.children.size() > 0) throw new Error();
-				Unit unit = associationMap.getUnit(Stratum.calling);
-				associationMap.setUnit(operand1, Stratum.calling, unit);
+				Unit subwording = associationMap.getUnit(operand1, Stratum.wording);
+				Unit subcalling = associationMap.getUnit(Stratum.calling);
+				for (String function : subwording.functions) {
+					associationMap.setUnit(function, Stratum.calling, subcalling);
+				}
 			}
 		}
 		for (Statement statement : statements) {
