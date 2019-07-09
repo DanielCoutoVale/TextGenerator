@@ -20,7 +20,7 @@ event-group and compound-past
 - insert a OST
 - insert a TenseAuxiliary
 - conflate the TenseAuxiliary with the OST
-- place the TenseAuxiliary before the TenseGerund
+- place the TenseGerund before the TenseAuxiliary
 - classify the TenseAuxiliary as words
 - classify the TenseAuxiliary as verb
 - lexify the TenseAuxiliary as base:esse
