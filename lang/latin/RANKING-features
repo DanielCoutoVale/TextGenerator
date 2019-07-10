@@ -1,7 +1,6 @@
 
 words
-- log that the unit # is a word
-- log that the unit ## is a word
+- log that the unit # ## is a word
 - insert a Core
 - expand the Core with a Stem
 - classify the Stem as morphemes
@@ -9,6 +8,7 @@ words
 - lexify the Stem like this unit
 
 morphemes
+- log that the unit # ## is a morpheme
 - prepare substance 
 
 phrase

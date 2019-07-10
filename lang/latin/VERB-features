@@ -23,7 +23,7 @@ verb and ū-aspect-core
 - classify the Stem as ū-aspect
 - classify the Leaf as unbranched
 
-verb and ( bā-branch-core or b-branch-core or ē-branch-core )
+verb and ( bā-branch-core or b-branch-core or ē-branch-core or rē-branch-core )
 - log that the unit # is a branch-core verb
 - classify the Stem as ō-aspect
 - expand the Core with a Branch
@@ -52,6 +52,13 @@ verb and ē-branch-core
 - classify the Stem as ē-branch
 - classify the Leaf as ē-branch
 
+verb and rē-branch-core
+- log that the unit # is an rē-branch-core verb
+- classify the Branch as rē-branch
+- lexify the Branch as rē-branch
+- classify the Stem as rē-branch
+- classify the Leaf as rē-branch
+
 verb and dīcere-type and seam1 and ī-aspect-core
 - classify the Stem as ī-leaf
 
@@ -62,10 +69,10 @@ verb and dīcere-type and seam1 and ī-aspect-core
 verb and dīcere-type and seam1 and ō-aspect-core
 - classify the Stem as ō-leaf
 
-verb and dīcere-type and seam1 and ( bā-branch-core or b-branch-core or ē-branch-core )
+verb and dīcere-type and seam1 and ( bā-branch-core or b-branch-core or ē-branch-core or rē-branch-core )
 - classify the Branch as ō-leaf
 
-verb and dīcere-type and seam1 and ( bā-branch-core or b-branch-core or ē-branch-core or ō-aspect-core )
+verb and dīcere-type and seam1 and ( bā-branch-core or b-branch-core or ē-branch-core or rē-branch-core or ō-aspect-core )
 - classify the Leaf as ō-leaf
 - lexify the Leaf as ō-leaf
 
@@ -79,10 +86,10 @@ verb and dīcere-type and seam2 and ī-aspect-core
 verb and dīcere-type and seam2 and ō-aspect-core
 - classify the Stem as s-leaf
 
-verb and dīcere-type and seam2 and ( bā-branch-core or b-branch-core or ē-branch-core )
+verb and dīcere-type and seam2 and ( bā-branch-core or b-branch-core or ē-branch-core or rē-branch-core )
 - classify the Branch as s-leaf
 
-verb and dīcere-type and seam2 and ( bā-branch-core or b-branch-core or ē-branch-core or ō-aspect-core )
+verb and dīcere-type and seam2 and ( bā-branch-core or b-branch-core or ē-branch-core or rē-branch-core or ō-aspect-core )
 - classify the Leaf as s-leaf
 - lexify the Leaf as s-leaf
 
@@ -96,10 +103,10 @@ verb and dīcere-type and seam3 and ī-aspect-core
 verb and dīcere-type and seam3 and ō-aspect-core
 - classify the Stem as t-leaf
 
-verb and dīcere-type and seam3 and ( bā-branch-core or b-branch-core or ē-branch-core )
+verb and dīcere-type and seam3 and ( bā-branch-core or b-branch-core or ē-branch-core or rē-branch-core )
 - classify the Branch as t-leaf
 
-verb and dīcere-type and seam3 and ( bā-branch-core or b-branch-core or ē-branch-core or ō-aspect-core )
+verb and dīcere-type and seam3 and ( bā-branch-core or b-branch-core or ē-branch-core or rē-branch-core or ō-aspect-core )
 - classify the Leaf as t-leaf
 - lexify the Leaf as t-leaf
 
@@ -113,10 +120,10 @@ verb and dīcere-type and seam4 and ī-aspect-core
 verb and dīcere-type and seam4 and ō-aspect-core
 - classify the Stem as mus-leaf
 
-verb and dīcere-type and seam4 and ( bā-branch-core or b-branch-core or ē-branch-core )
+verb and dīcere-type and seam4 and ( bā-branch-core or b-branch-core or ē-branch-core or rē-branch-core )
 - classify the Branch as mus-leaf
 
-verb and dīcere-type and seam4 and ( bā-branch-core or b-branch-core or ē-branch-core or ō-aspect-core )
+verb and dīcere-type and seam4 and ( bā-branch-core or b-branch-core or ē-branch-core or rē-branch-core or ō-aspect-core )
 - classify the Leaf as mus-leaf
 - lexify the Leaf as mus-leaf
 
@@ -130,10 +137,10 @@ verb and dīcere-type and seam5 and ī-aspect-core
 verb and dīcere-type and seam5 and ō-aspect-core
 - classify the Stem as tis-leaf
 
-verb and dīcere-type and seam5 and ( bā-branch-core or b-branch-core or ē-branch-core )
+verb and dīcere-type and seam5 and ( bā-branch-core or b-branch-core or ē-branch-core or rē-branch-core )
 - classify the Branch as tis-leaf
 
-verb and dīcere-type and seam5 and ( bā-branch-core or b-branch-core or ē-branch-core or ō-aspect-core )
+verb and dīcere-type and seam5 and ( bā-branch-core or b-branch-core or ē-branch-core or rē-branch-core or ō-aspect-core )
 - classify the Leaf as tis-leaf
 - lexify the Leaf as tis-leaf
 
@@ -147,17 +154,17 @@ verb and dīcere-type and seam6 and ī-aspect-core
 verb and dīcere-type and seam6 and ō-aspect-core
 - classify the Stem as nt-leaf
 
-verb and dīcere-type and seam6 and ( bā-branch-core or b-branch-core or ē-branch-core )
+verb and dīcere-type and seam6 and ( bā-branch-core or b-branch-core or ē-branch-core or rē-branch-core )
 - classify the Branch as nt-leaf
 
-verb and dīcere-type and seam6 and ( bā-branch-core or b-branch-core or ē-branch-core or ō-aspect-core )
+verb and dīcere-type and seam6 and ( bā-branch-core or b-branch-core or ē-branch-core or rē-branch-core or ō-aspect-core )
 - classify the Leaf as nt-leaf
 - lexify the Leaf as nt-leaf
 
 verb and loquī-type and ō-aspect-core and seam1
 - classify the Stem as or-leaf
 
-verb and loquī-type and seam1 and ( bā-branch-core or b-branch-core or ē-branch-core )
+verb and loquī-type and seam1 and ( bā-branch-core or b-branch-core or ē-branch-core or rē-branch-core )
 - classify the Branch as or-leaf
 
 verb and loquī-type and seam1
@@ -167,7 +174,7 @@ verb and loquī-type and seam1
 verb and loquī-type and ō-aspect-core and seam2
 - classify the Stem as ris-leaf
 
-verb and loquī-type and seam2 and ( bā-branch-core or b-branch-core or ē-branch-core )
+verb and loquī-type and seam2 and ( bā-branch-core or b-branch-core or ē-branch-core or rē-branch-core )
 - classify the Branch as ris-leaf
 
 verb and loquī-type and seam2
@@ -177,7 +184,7 @@ verb and loquī-type and seam2
 verb and loquī-type and ō-aspect-core and seam3
 - classify the Stem as tur-leaf
 
-verb and loquī-type and seam3 and ( bā-branch-core or b-branch-core or ē-branch-core )
+verb and loquī-type and seam3 and ( bā-branch-core or b-branch-core or ē-branch-core or rē-branch-core )
 - classify the Branch as tur-leaf
 
 verb and loquī-type and seam3
@@ -187,7 +194,7 @@ verb and loquī-type and seam3
 verb and loquī-type and ō-aspect-core and seam4
 - classify the Stem as mur-leaf
 
-verb and loquī-type and seam4 and ( bā-branch-core or b-branch-core or ē-branch-core )
+verb and loquī-type and seam4 and ( bā-branch-core or b-branch-core or ē-branch-core or rē-branch-core )
 - classify the Branch as mur-leaf
 
 verb and loquī-type and seam4
@@ -197,7 +204,7 @@ verb and loquī-type and seam4
 verb and loquī-type and ō-aspect-core and seam5
 - classify the Stem as minī-leaf
 
-verb and loquī-type and seam5 and ( bā-branch-core or b-branch-core or ē-branch-core )
+verb and loquī-type and seam5 and ( bā-branch-core or b-branch-core or ē-branch-core or rē-branch-core )
 - classify the Branch as minī-leaf
 
 verb and loquī-type and seam5
@@ -207,7 +214,7 @@ verb and loquī-type and seam5
 verb and loquī-type and ō-aspect-core and seam6
 - classify the Stem as ntur-leaf
 
-verb and loquī-type and seam6 and ( bā-branch-core or b-branch-core or ē-branch-core )
+verb and loquī-type and seam6 and ( bā-branch-core or b-branch-core or ē-branch-core or rē-branch-core )
 - classify the Branch as ntur-leaf
 
 verb and loquī-type and seam6
@@ -237,6 +244,12 @@ verb and s-strand
 
 verb and hard-strand
 - classify the Leaf as hard-strand
+
+verb and hard-strand and rē-branch-core
+- classify the Branch as hard-strand
+
+verb and s-strand and rē-branch-core
+- classify the Branch as s-strand
 
 stem and verbal and ō-aspect
 - log that the unit # is an ō-aspect stem
@@ -269,7 +282,7 @@ stem and regular and ( mus-leaf or tis-leaf or tur-leaf or mur-leaf or minī-lea
 - mould substance as strong
 - mould substance as closed
 
-stem and regular and ris-leaf
+stem and regular and ( ris-leaf or rē-branch )
 - mould substance as strong
 - mould substance as open
 
@@ -320,25 +333,41 @@ branch and ē-branch and ( s-leaf or mus-leaf or tis-leaf or ris-leaf or tur-lea
 - mould substance as ā-sonant
 - mould substance as strong
 
-leaf and ō-leaf and ( bā-branch or b-branch or ē-branch or ( unbranched and s-strand ) )
+branch and rē-branch and hard-strand
+- log that the unit # is rhotic
+- mould substance as rhotic
+
+branch and rē-branch and s-strand
+- log that the unit # is sibilant
+- mould substance as sibilant
+
+branch and rē-branch and ( ō-leaf or or-leaf or nt-leaf or ntur-leaf or t-leaf )
+- log that the unit # is weak
+- mould substance as weak
+
+branch and rē-branch and ( s-leaf or mus-leaf or tis-leaf or ris-leaf or tur-leaf or mur-leaf or minī-leaf )
+- log that the unit # is strong
+- mould substance as strong
+
+leaf and ō-leaf and ( bā-branch or b-branch or ē-branch or rē-branch or ( unbranched and s-strand ) )
 - mould substance as consonant
 
 leaf and ō-leaf and unbranched and hard-strand
 - mould substance as sonant
 
-leaf and or-leaf and ( bā-branch or b-branch or ē-branch )
+leaf and or-leaf and ( bā-branch or b-branch or ē-branch or rē-branch )
 - mould substance as consonant
 
 leaf and or-leaf and unbranched
 - mould substance as sonant
 
-leaf and nt-leaf and ( bā-branch or b-branch or ē-branch )
+leaf and nt-leaf and ( bā-branch or b-branch or ē-branch or rē-branch )
 - mould substance as short
 
 leaf and nt-leaf and unbranched
 - mould substance as long
 
-leaf and ntur-leaf and ( bā-branch or b-branch or ē-branch )
+leaf and ntur-leaf and ( bā-branch or b-branch or ē-branch or rē-branch )
 - mould substance as short
 
 leaf and ntur-leaf and unbranched

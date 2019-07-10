@@ -29,6 +29,7 @@ public class LaGeneratorTest {
 	public void test1() throws IOException {
 		generateThing("Slave");
 		generateThing("SlaveOwner");
+		System.out.println();
 	}
 
 //	@Test
@@ -49,79 +50,52 @@ public class LaGeneratorTest {
 	public final void test2() throws IOException {
 		generator = new Generator("lang/latin");
 		generator.setLogging(false);
+		generateDīcereTypeVerb("base:dīcere");
+		generateDīcereTypeVerb("base:dūcere");
+		generateLoquīTypeVerb("base:loquī");
+		generateOstVerb("base:esse", "ō-aspect-core");
 		System.out.println();
-		generator.generateWord("base:dīcere", "verb", "ō-aspect-core", "seam1");
-		generator.generateWord("base:dīcere", "verb", "ō-aspect-core", "seam2");
-		generator.generateWord("base:dīcere", "verb", "ō-aspect-core", "seam3");
-		generator.generateWord("base:dīcere", "verb", "ō-aspect-core", "seam4");
-		generator.generateWord("base:dīcere", "verb", "ō-aspect-core", "seam5");
-		generator.generateWord("base:dīcere", "verb", "ō-aspect-core", "seam6");
-		generator.generateWord("base:dīcere", "verb", "bā-branch-core", "seam1");
-		generator.generateWord("base:dīcere", "verb", "bā-branch-core", "seam2");
-		generator.generateWord("base:dīcere", "verb", "bā-branch-core", "seam3");
-		generator.generateWord("base:dīcere", "verb", "bā-branch-core", "seam4");
-		generator.generateWord("base:dīcere", "verb", "bā-branch-core", "seam5");
-		generator.generateWord("base:dīcere", "verb", "bā-branch-core", "seam6");
-		generator.generateWord("base:dīcere", "verb", "b-branch-core", "seam1");
-		generator.generateWord("base:dīcere", "verb", "b-branch-core", "seam2");
-		generator.generateWord("base:dīcere", "verb", "b-branch-core", "seam3");
-		generator.generateWord("base:dīcere", "verb", "b-branch-core", "seam4");
-		generator.generateWord("base:dīcere", "verb", "b-branch-core", "seam5");
-		generator.generateWord("base:dīcere", "verb", "b-branch-core", "seam6");
-		generator.generateWord("base:dīcere", "verb", "ē-branch-core", "seam1");
-		generator.generateWord("base:dīcere", "verb", "ē-branch-core", "seam2");
-		generator.generateWord("base:dīcere", "verb", "ē-branch-core", "seam3");
-		generator.generateWord("base:dīcere", "verb", "ē-branch-core", "seam4");
-		generator.generateWord("base:dīcere", "verb", "ē-branch-core", "seam5");
-		generator.generateWord("base:dīcere", "verb", "ē-branch-core", "seam6");
-		generator.generateWord("base:dīcere", "verb", "ī-aspect-core", "seam1");
-		generator.generateWord("base:dīcere", "verb", "ī-aspect-core", "seam2");
-		generator.generateWord("base:dīcere", "verb", "ī-aspect-core", "seam3");
-		generator.generateWord("base:dīcere", "verb", "ī-aspect-core", "seam4");
-		generator.generateWord("base:dīcere", "verb", "ī-aspect-core", "seam5");
-		generator.generateWord("base:dīcere", "verb", "ī-aspect-core", "seam6");
+	}
+
+	private void generateLoquīTypeVerb(String item) {
+		generateOstVerb(item, "ō-aspect-core");
+		generateOstVerb(item, "bā-branch-core");
+		generateOstVerb(item, "b-branch-core");
+		generateOstVerb(item, "ē-branch-core");
+		generateOstVerb(item, "rē-branch-core");
+		generateAumusVerb(item, "ū-aspect-core");
 		System.out.println();
-		generator.generateWord("base:loquī", "verb", "ō-aspect-core", "seam1");
-		generator.generateWord("base:loquī", "verb", "ō-aspect-core", "seam2");
-		generator.generateWord("base:loquī", "verb", "ō-aspect-core", "seam3");
-		generator.generateWord("base:loquī", "verb", "ō-aspect-core", "seam4");
-		generator.generateWord("base:loquī", "verb", "ō-aspect-core", "seam5");
-		generator.generateWord("base:loquī", "verb", "ō-aspect-core", "seam6");
-		generator.generateWord("base:loquī", "verb", "bā-branch-core", "seam1");
-		generator.generateWord("base:loquī", "verb", "bā-branch-core", "seam2");
-		generator.generateWord("base:loquī", "verb", "bā-branch-core", "seam3");
-		generator.generateWord("base:loquī", "verb", "bā-branch-core", "seam4");
-		generator.generateWord("base:loquī", "verb", "bā-branch-core", "seam5");
-		generator.generateWord("base:loquī", "verb", "bā-branch-core", "seam6");
-		generator.generateWord("base:loquī", "verb", "b-branch-core", "seam1");
-		generator.generateWord("base:loquī", "verb", "b-branch-core", "seam2");
-		generator.generateWord("base:loquī", "verb", "b-branch-core", "seam3");
-		generator.generateWord("base:loquī", "verb", "b-branch-core", "seam4");
-		generator.generateWord("base:loquī", "verb", "b-branch-core", "seam5");
-		generator.generateWord("base:loquī", "verb", "b-branch-core", "seam6");
-		generator.generateWord("base:loquī", "verb", "ē-branch-core", "seam1");
-		generator.generateWord("base:loquī", "verb", "ē-branch-core", "seam2");
-		generator.generateWord("base:loquī", "verb", "ē-branch-core", "seam3");
-		generator.generateWord("base:loquī", "verb", "ē-branch-core", "seam4");
-		generator.generateWord("base:loquī", "verb", "ē-branch-core", "seam5");
-		generator.generateWord("base:loquī", "verb", "ē-branch-core", "seam6");
-		generator.generateWord("base:loquī", "verb", "ū-aspect-core", "seamA");
-		generator.generateWord("base:loquī", "verb", "ū-aspect-core", "seamB");
-		generator.generateWord("base:loquī", "verb", "ū-aspect-core", "seamC");
-		generator.generateWord("base:loquī", "verb", "ū-aspect-core", "seamD");
-		generator.generateWord("base:loquī", "verb", "ū-aspect-core", "seamE");
-		generator.generateWord("base:loquī", "verb", "ū-aspect-core", "seamF");
+	}
+
+	private void generateDīcereTypeVerb(String item) {
+		generateOstVerb(item, "ō-aspect-core");
+		generateOstVerb(item, "bā-branch-core");
+		generateOstVerb(item, "b-branch-core");
+		generateOstVerb(item, "ē-branch-core");
+		generateOstVerb(item, "rē-branch-core");
+		generateOstVerb(item, "ī-aspect-core");
 		System.out.println();
-		generator.generateWord("base:esse", "verb", "ō-aspect-core", "seam1");
-		generator.generateWord("base:esse", "verb", "ō-aspect-core", "seam2");
-		generator.generateWord("base:esse", "verb", "ō-aspect-core", "seam3");
-		generator.generateWord("base:esse", "verb", "ō-aspect-core", "seam4");
-		generator.generateWord("base:esse", "verb", "ō-aspect-core", "seam5");
-		generator.generateWord("base:esse", "verb", "ō-aspect-core", "seam6");
+	}
+
+	private void generateAumusVerb(String item, String core) {
+		generator.generateWord(item, "verb", core, "seamA");
+		generator.generateWord(item, "verb", core, "seamB");
+		generator.generateWord(item, "verb", core, "seamC");
+		generator.generateWord(item, "verb", core, "seamD");
+		generator.generateWord(item, "verb", core, "seamE");
+		generator.generateWord(item, "verb", core, "seamF");
+	}
+
+	private void generateOstVerb(String item, String core) {
+		generator.generateWord(item, "verb", core, "seam1");
+		generator.generateWord(item, "verb", core, "seam2");
+		generator.generateWord(item, "verb", core, "seam3");
+		generator.generateWord(item, "verb", core, "seam4");
+		generator.generateWord(item, "verb", core, "seam5");
+		generator.generateWord(item, "verb", core, "seam6");
 	}
 	
 	private final void generateEventGroup(String lowerClass) {
-		System.out.println();
 		generator.generateGroup("Event", lowerClass, "seam1", "seamA");
 		generator.generateGroup("Event", lowerClass, "seam1", "seamC");
 		generator.generateGroup("Event", lowerClass, "seam2", "seamA");
@@ -134,6 +108,7 @@ public class LaGeneratorTest {
 		generator.generateGroup("Event", lowerClass, "seam5", "seamF");
 		generator.generateGroup("Event", lowerClass, "seam6", "seamD");
 		generator.generateGroup("Event", lowerClass, "seam6", "seamF");
+		System.out.println();
 	}
 	
 	@Test

@@ -17,6 +17,16 @@ dīx - ī-aspect long
 dīx - ī-aspect short
 dict - ū-aspect
 
+base:dūcere dīcere-type hard-strand
+dūc - ō-aspect weak short
+dūc - ō-aspect weak mid
+dūci - ō-aspect weak long
+dūci - ō-aspect strong closed
+dūce - ō-aspect strong open
+dūx - ī-aspect long
+dūx - ī-aspect short
+duct - ū-aspect
+
 base:esse s-strand
 su - ō-aspect non-sonant long
 s - ō-aspect non-sonant short
@@ -52,6 +62,12 @@ a - ā-sonant weak
 ā - ā-sonant strong
 i - ī-sonant weak
 ī - ī-sonant strong
+
+rē-branch
+re - rhotic weak
+rē - rhotic strong
+se - sibilant weak
+sē - sibilant strong
 
 ō-leaf
 ō - sonant
