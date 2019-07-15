@@ -52,6 +52,8 @@ public class LaGeneratorTest {
 		generator.setLogging(false);
 		generateDīcereTypeVerb("base:dīcere");
 		generateDīcereTypeVerb("base:dūcere");
+		generateDīcereTypeVerb("base:facere");
+		generateDīcereTypeVerb("base:audīre");
 		generateLoquīTypeVerb("base:loquī");
 		generateOstVerb("base:esse", "ō-aspect-core");
 		System.out.println();
@@ -86,7 +88,7 @@ public class LaGeneratorTest {
 		generator.generateWord(item, "verb", core, "seamF");
 	}
 
-	private void generateOstVerb(String item, String core) {
+	private final void generateOstVerb(String item, String core) {
 		generator.generateWord(item, "verb", core, "seam1");
 		generator.generateWord(item, "verb", core, "seam2");
 		generator.generateWord(item, "verb", core, "seam3");

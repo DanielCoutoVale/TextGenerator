@@ -27,6 +27,26 @@ dūx - ī-aspect long
 dūx - ī-aspect short
 duct - ū-aspect
 
+base:facere dīcere-type i-strand
+faci - ō-aspect weak short
+faci - ō-aspect weak mid
+faci - ō-aspect weak long
+faci - ō-aspect strong closed
+face - ō-aspect strong open
+fēc - ī-aspect long
+fēc - ī-aspect short
+fact - ū-aspect
+
+base:audīre dīcere-type ī-strand v-strand
+audi - ō-aspect weak short
+audi - ō-aspect weak mid
+audī - ō-aspect weak long
+audī - ō-aspect strong closed
+audī - ō-aspect strong open
+audīv - ī-aspect long
+audī - ī-aspect short
+audīt - ū-aspect
+
 base:esse s-strand
 su - ō-aspect non-sonant long
 s - ō-aspect non-sonant short
