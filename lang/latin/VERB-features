@@ -29,6 +29,7 @@ verb and ( bā-branch-core or b-branch-core or ē-branch-core or rē-branch-core
 - expand the Core with a Branch
 - classify the Branch as morphemes
 - classify the Branch as branch
+- classify the Branch as verbal
 - place the Stem before the Branch
 
 verb and bā-branch-core
@@ -250,52 +251,6 @@ verb and hard-strand and rē-branch-core
 
 verb and s-strand and rē-branch-core
 - classify the Branch as s-strand
-
-branch and bā-branch and ( ō-leaf or or-leaf or nt-leaf or ntur-leaf or t-leaf )
-- mould substance as long
-- mould substance as weak
-
-branch and bā-branch and ( s-leaf or mus-leaf or tis-leaf or ris-leaf or tur-leaf or mur-leaf or minī-leaf )
-- mould substance as long
-- mould substance as strong
-
-branch and b-branch and ( ō-leaf or or-leaf )
-- mould substance as ē-sonant
-- mould substance as weak
-- mould substance as open
-
-branch and b-branch and ( nt-leaf or ntur-leaf or t-leaf )
-- mould substance as ē-sonant
-- mould substance as weak
-- mould substance as closed
-
-branch and b-branch and ( s-leaf or mus-leaf or tis-leaf or ris-leaf or tur-leaf or mur-leaf or minī-leaf )
-- mould substance as ē-sonant
-- mould substance as strong
-
-branch and ē-branch and ( ō-leaf or or-leaf or nt-leaf or ntur-leaf or t-leaf )
-- mould substance as ā-sonant
-- mould substance as weak
-
-branch and ē-branch and ( s-leaf or mus-leaf or tis-leaf or ris-leaf or tur-leaf or mur-leaf or minī-leaf )
-- mould substance as ā-sonant
-- mould substance as strong
-
-branch and rē-branch and hard-strand
-- log that the unit # is rhotic
-- mould substance as rhotic
-
-branch and rē-branch and s-strand
-- log that the unit # is sibilant
-- mould substance as sibilant
-
-branch and rē-branch and ( ō-leaf or or-leaf or nt-leaf or ntur-leaf or t-leaf )
-- log that the unit # is weak
-- mould substance as weak
-
-branch and rē-branch and ( s-leaf or mus-leaf or tis-leaf or ris-leaf or tur-leaf or mur-leaf or minī-leaf )
-- log that the unit # is strong
-- mould substance as strong
 
 leaf and ō-leaf and ( bā-branch or b-branch or ē-branch or rē-branch or ( unbranched and s-strand ) )
 - mould substance as consonant
