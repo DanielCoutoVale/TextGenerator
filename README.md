@@ -97,3 +97,25 @@ English:
 - **Barcelona** **player** Ivan Rakitic scored in the 4th minute.
 
 ## Other text generators
+
+
+## Agreement Code
+```
+verb and ( a-am-seam or ( singular and ( a-seam or female ) ) )
+- lexify the Leaf as a-am-leaf
+
+verb and ( um-um-seam or ( singular and um-seam ) )
+- lexify the Leaf as um-um-leaf
+
+verb and ( us-um-seam or ( singular and ( us-seam or male ) ) )
+- lexify the Leaf as us-um-leaf
+
+verb and ( ae-ās-seam or ( plural and ( a-seam or male- ) ) )
+- lexify the Leaf as ae-ās-leaf
+
+verb and ( a-a-seam or ( plural and um-seam ) )
+- lexify the Leaf as a-a-leaf
+
+verb and ( ī-ōs-seam or ( plural and ( us-seam or male+ ) ) )
+- lexify the Leaf as ī-ōs-leaf
+```
