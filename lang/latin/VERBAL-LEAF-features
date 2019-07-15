@@ -2,26 +2,14 @@
 leaf and verbal
 - log that the unit # is a verbal leaf 
 
-leaf and verbal and ō-leaf and ( bā-branch or b-branch or ē-branch or rē-branch or ( unbranched and s-strand ) )
+leaf and verbal and ( ō-leaf or or-leaf ) and ( bā-branch or b-branch or ē-branch or rē-branch or ( unbranched and s-strand ) )
 - mould substance as consonant
 
-leaf and verbal and ō-leaf and unbranched and hard-strand
+leaf and verbal and ( ō-leaf or or-leaf ) and unbranched and hard-strand
 - mould substance as sonant
 
-leaf and verbal and or-leaf and ( bā-branch or b-branch or ē-branch or rē-branch )
-- mould substance as consonant
-
-leaf and verbal and or-leaf and unbranched
-- mould substance as sonant
-
-leaf and verbal and nt-leaf and ( bā-branch or b-branch or ē-branch or rē-branch )
+leaf and verbal and ( nt-leaf or ntur-leaf ) and ( bā-branch or b-branch or ē-branch or rē-branch )
 - mould substance as short
 
-leaf and verbal and nt-leaf and unbranched
-- mould substance as long
-
-leaf and verbal and ntur-leaf and ( bā-branch or b-branch or ē-branch or rē-branch )
-- mould substance as short
-
-leaf and verbal and ntur-leaf and unbranched
+leaf and verbal and ( nt-leaf or ntur-leaf ) and unbranched
 - mould substance as long
