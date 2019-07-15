@@ -1,17 +1,16 @@
-
-GE-BRANCH-PRESENCE verb
-- if the Unit is an loquī-type item
+VERB-TYPE verb
+- if the Unit is a loquī-type item
   - choose loquī-type
 - otherwise
   - choose dīcere-type
 
-STRAND verb
+VERB-STRAND verb
 - if the Unit is an s-strand item
   - choose s-strand
 - otherwise
   - choose hard-strand
 
-REGULARITY stem
+VERB-REGULARITY stem
 - if the Unit is an s-strand item
   - choose s-irregular
 - otherwise
