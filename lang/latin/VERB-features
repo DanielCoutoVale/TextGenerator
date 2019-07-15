@@ -61,165 +61,165 @@ verb and rē-branch-core
 - classify the Stem as rē-branch
 - classify the Leaf as rē-branch
 
-verb and dīcere-type and seam1 and ī-aspect-core
+verb and dīcere-type and ō-seam and ī-aspect-core
 - classify the Stem as ī-leaf
 
-verb and dīcere-type and seam1 and ī-aspect-core
+verb and dīcere-type and ō-seam and ī-aspect-core
 - classify the Leaf as ī-leaf
 - lexify the Leaf as ī-leaf
 
-verb and dīcere-type and seam1 and ō-aspect-core
+verb and dīcere-type and ō-seam and ō-aspect-core
 - classify the Stem as ō-leaf
 
-verb and dīcere-type and seam1 and ( bā-branch-core or b-branch-core or ē-branch-core or rē-branch-core )
+verb and dīcere-type and ō-seam and ( bā-branch-core or b-branch-core or ē-branch-core or rē-branch-core )
 - classify the Branch as ō-leaf
 
-verb and dīcere-type and seam1 and ( bā-branch-core or b-branch-core or ē-branch-core or rē-branch-core or ō-aspect-core )
+verb and dīcere-type and ō-seam and ( bā-branch-core or b-branch-core or ē-branch-core or rē-branch-core or ō-aspect-core )
 - classify the Leaf as ō-leaf
 - lexify the Leaf as ō-leaf
 
-verb and dīcere-type and seam2 and ī-aspect-core
+verb and dīcere-type and s-seam and ī-aspect-core
 - classify the Stem as istī-leaf
 
-verb and dīcere-type and seam2 and ī-aspect-core
+verb and dīcere-type and s-seam and ī-aspect-core
 - classify the Leaf as istī-leaf
 - lexify the Leaf as istī-leaf
 
-verb and dīcere-type and seam2 and ō-aspect-core
+verb and dīcere-type and s-seam and ō-aspect-core
 - classify the Stem as s-leaf
 
-verb and dīcere-type and seam2 and ( bā-branch-core or b-branch-core or ē-branch-core or rē-branch-core )
+verb and dīcere-type and s-seam and ( bā-branch-core or b-branch-core or ē-branch-core or rē-branch-core )
 - classify the Branch as s-leaf
 
-verb and dīcere-type and seam2 and ( bā-branch-core or b-branch-core or ē-branch-core or rē-branch-core or ō-aspect-core )
+verb and dīcere-type and s-seam and ( bā-branch-core or b-branch-core or ē-branch-core or rē-branch-core or ō-aspect-core )
 - classify the Leaf as s-leaf
 - lexify the Leaf as s-leaf
 
-verb and dīcere-type and seam3 and ī-aspect-core
+verb and dīcere-type and t-seam and ī-aspect-core
 - classify the Stem as it-leaf
 
-verb and dīcere-type and seam3 and ī-aspect-core
+verb and dīcere-type and t-seam and ī-aspect-core
 - classify the Leaf as it-leaf
 - lexify the Leaf as it-leaf
 
-verb and dīcere-type and seam3 and ō-aspect-core
+verb and dīcere-type and t-seam and ō-aspect-core
 - classify the Stem as t-leaf
 
-verb and dīcere-type and seam3 and ( bā-branch-core or b-branch-core or ē-branch-core or rē-branch-core )
+verb and dīcere-type and t-seam and ( bā-branch-core or b-branch-core or ē-branch-core or rē-branch-core )
 - classify the Branch as t-leaf
 
-verb and dīcere-type and seam3 and ( bā-branch-core or b-branch-core or ē-branch-core or rē-branch-core or ō-aspect-core )
+verb and dīcere-type and t-seam and ( bā-branch-core or b-branch-core or ē-branch-core or rē-branch-core or ō-aspect-core )
 - classify the Leaf as t-leaf
 - lexify the Leaf as t-leaf
 
-verb and dīcere-type and seam4 and ī-aspect-core
+verb and dīcere-type and mus-seam and ī-aspect-core
 - classify the Stem as imus-leaf
 
-verb and dīcere-type and seam4 and ī-aspect-core
+verb and dīcere-type and mus-seam and ī-aspect-core
 - classify the Leaf as imus-leaf
 - lexify the Leaf as imus-leaf
 
-verb and dīcere-type and seam4 and ō-aspect-core
+verb and dīcere-type and mus-seam and ō-aspect-core
 - classify the Stem as mus-leaf
 
-verb and dīcere-type and seam4 and ( bā-branch-core or b-branch-core or ē-branch-core or rē-branch-core )
+verb and dīcere-type and mus-seam and ( bā-branch-core or b-branch-core or ē-branch-core or rē-branch-core )
 - classify the Branch as mus-leaf
 
-verb and dīcere-type and seam4 and ( bā-branch-core or b-branch-core or ē-branch-core or rē-branch-core or ō-aspect-core )
+verb and dīcere-type and mus-seam and ( bā-branch-core or b-branch-core or ē-branch-core or rē-branch-core or ō-aspect-core )
 - classify the Leaf as mus-leaf
 - lexify the Leaf as mus-leaf
 
-verb and dīcere-type and seam5 and ī-aspect-core
+verb and dīcere-type and tis-seam and ī-aspect-core
 - classify the Stem as istis-leaf
 
-verb and dīcere-type and seam5 and ī-aspect-core
+verb and dīcere-type and tis-seam and ī-aspect-core
 - classify the Leaf as istis-leaf
 - lexify the Leaf as istis-leaf
 
-verb and dīcere-type and seam5 and ō-aspect-core
+verb and dīcere-type and tis-seam and ō-aspect-core
 - classify the Stem as tis-leaf
 
-verb and dīcere-type and seam5 and ( bā-branch-core or b-branch-core or ē-branch-core or rē-branch-core )
+verb and dīcere-type and tis-seam and ( bā-branch-core or b-branch-core or ē-branch-core or rē-branch-core )
 - classify the Branch as tis-leaf
 
-verb and dīcere-type and seam5 and ( bā-branch-core or b-branch-core or ē-branch-core or rē-branch-core or ō-aspect-core )
+verb and dīcere-type and tis-seam and ( bā-branch-core or b-branch-core or ē-branch-core or rē-branch-core or ō-aspect-core )
 - classify the Leaf as tis-leaf
 - lexify the Leaf as tis-leaf
 
-verb and dīcere-type and seam6 and ī-aspect-core
+verb and dīcere-type and nt-seam and ī-aspect-core
 - classify the Stem as ērunt-leaf
 
-verb and dīcere-type and seam6 and ī-aspect-core
+verb and dīcere-type and nt-seam and ī-aspect-core
 - classify the Leaf as ērunt-leaf
 - lexify the Leaf as ērunt-leaf
 
-verb and dīcere-type and seam6 and ō-aspect-core
+verb and dīcere-type and nt-seam and ō-aspect-core
 - classify the Stem as nt-leaf
 
-verb and dīcere-type and seam6 and ( bā-branch-core or b-branch-core or ē-branch-core or rē-branch-core )
+verb and dīcere-type and nt-seam and ( bā-branch-core or b-branch-core or ē-branch-core or rē-branch-core )
 - classify the Branch as nt-leaf
 
-verb and dīcere-type and seam6 and ( bā-branch-core or b-branch-core or ē-branch-core or rē-branch-core or ō-aspect-core )
+verb and dīcere-type and nt-seam and ( bā-branch-core or b-branch-core or ē-branch-core or rē-branch-core or ō-aspect-core )
 - classify the Leaf as nt-leaf
 - lexify the Leaf as nt-leaf
 
-verb and loquī-type and ō-aspect-core and seam1
+verb and loquī-type and ō-aspect-core and ō-seam
 - classify the Stem as or-leaf
 
-verb and loquī-type and seam1 and ( bā-branch-core or b-branch-core or ē-branch-core or rē-branch-core )
+verb and loquī-type and ō-seam and ( bā-branch-core or b-branch-core or ē-branch-core or rē-branch-core )
 - classify the Branch as or-leaf
 
-verb and loquī-type and seam1
+verb and loquī-type and ō-seam
 - classify the Leaf as or-leaf
 - lexify the Leaf as or-leaf
 
-verb and loquī-type and ō-aspect-core and seam2
+verb and loquī-type and ō-aspect-core and s-seam
 - classify the Stem as ris-leaf
 
-verb and loquī-type and seam2 and ( bā-branch-core or b-branch-core or ē-branch-core or rē-branch-core )
+verb and loquī-type and s-seam and ( bā-branch-core or b-branch-core or ē-branch-core or rē-branch-core )
 - classify the Branch as ris-leaf
 
-verb and loquī-type and seam2
+verb and loquī-type and s-seam
 - classify the Leaf as ris-leaf
 - lexify the Leaf as ris-leaf
 
-verb and loquī-type and ō-aspect-core and seam3
+verb and loquī-type and ō-aspect-core and t-seam
 - classify the Stem as tur-leaf
 
-verb and loquī-type and seam3 and ( bā-branch-core or b-branch-core or ē-branch-core or rē-branch-core )
+verb and loquī-type and t-seam and ( bā-branch-core or b-branch-core or ē-branch-core or rē-branch-core )
 - classify the Branch as tur-leaf
 
-verb and loquī-type and seam3
+verb and loquī-type and t-seam
 - classify the Leaf as tur-leaf
 - lexify the Leaf as tur-leaf
 
-verb and loquī-type and ō-aspect-core and seam4
+verb and loquī-type and ō-aspect-core and mus-seam
 - classify the Stem as mur-leaf
 
-verb and loquī-type and seam4 and ( bā-branch-core or b-branch-core or ē-branch-core or rē-branch-core )
+verb and loquī-type and mus-seam and ( bā-branch-core or b-branch-core or ē-branch-core or rē-branch-core )
 - classify the Branch as mur-leaf
 
-verb and loquī-type and seam4
+verb and loquī-type and mus-seam
 - classify the Leaf as mur-leaf
 - lexify the Leaf as mur-leaf
 
-verb and loquī-type and ō-aspect-core and seam5
+verb and loquī-type and ō-aspect-core and tis-seam
 - classify the Stem as minī-leaf
 
-verb and loquī-type and seam5 and ( bā-branch-core or b-branch-core or ē-branch-core or rē-branch-core )
+verb and loquī-type and tis-seam and ( bā-branch-core or b-branch-core or ē-branch-core or rē-branch-core )
 - classify the Branch as minī-leaf
 
-verb and loquī-type and seam5
+verb and loquī-type and tis-seam
 - classify the Leaf as minī-leaf
 - lexify the Leaf as minī-leaf
 
-verb and loquī-type and ō-aspect-core and seam6
+verb and loquī-type and ō-aspect-core and nt-seam
 - classify the Stem as ntur-leaf
 
-verb and loquī-type and seam6 and ( bā-branch-core or b-branch-core or ē-branch-core or rē-branch-core )
+verb and loquī-type and nt-seam and ( bā-branch-core or b-branch-core or ē-branch-core or rē-branch-core )
 - classify the Branch as ntur-leaf
 
-verb and loquī-type and seam6
+verb and loquī-type and nt-seam
 - classify the Leaf as ntur-leaf
 - lexify the Leaf as ntur-leaf
 

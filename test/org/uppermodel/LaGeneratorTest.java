@@ -89,12 +89,12 @@ public class LaGeneratorTest {
 	}
 
 	private final void generateOstVerb(String item, String core) {
-		generator.generateWord(item, "verb", core, "seam1");
-		generator.generateWord(item, "verb", core, "seam2");
-		generator.generateWord(item, "verb", core, "seam3");
-		generator.generateWord(item, "verb", core, "seam4");
-		generator.generateWord(item, "verb", core, "seam5");
-		generator.generateWord(item, "verb", core, "seam6");
+		generator.generateWord(item, "verb", core, "ō-seam");
+		generator.generateWord(item, "verb", core, "s-seam");
+		generator.generateWord(item, "verb", core, "t-seam");
+		generator.generateWord(item, "verb", core, "mus-seam");
+		generator.generateWord(item, "verb", core, "tis-seam");
+		generator.generateWord(item, "verb", core, "nt-seam");
 	}
 	
 	private final void generateEventGroup(String lowerClass) {

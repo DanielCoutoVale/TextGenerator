@@ -27,28 +27,28 @@ event-group and compound-past
 - inflectify the TenseAuxiliary as ō-aspect-core
 
 event-group and ( speaker and singular ) and ost
-- log that the unit # has an ost seam 1
-- classify the OST as seam1
+- log that the unit # has an ost ō-seam
+- classify the OST as ō-seam
 
 event-group and ( addressee and singular ) and ost
-- log that the unit # has an ost seam 2
-- classify the OST as seam2
+- log that the unit # has an ost s-seam
+- classify the OST as s-seam
 
 event-group and ( ( non-interlocutor and singular ) or ( a-am-rhyme or um-um-rhyme or us-um-rhyme ) or ( ( a-rhyme or us-rhyme or um-rhyme ) and singular ) ) and ost
-- log that the unit # has an ost seam 3
-- classify the OST as seam3
+- log that the unit # has an ost t-seam
+- classify the OST as t-seam
 
 event-group and ( speaker+ and plural ) and ost
-- log that the unit # has an ost seam 4
-- classify the OST as seam4
+- log that the unit # has an ost mus-seam
+- classify the OST as mus-seam
 
 event-group and ( speaker- and addressee+ and plural ) and ost
-- log that the unit # has an ost seam 5
-- classify the OST as seam5
+- log that the unit # has an ost tis-seam
+- classify the OST as tis-seam
 
 event-group and ( ( speaker- and addressee- and plural ) or ( ae-ās--rhyme or a-a-rhyme or ī-ōs-rhyme ) or ( ( a-rhyme or us-rhyme or um-rhyme ) and plural ) ) and ost
-- log that the unit # has an ost seam 6
-- classify the OST as seam6
+- log that the unit # has an ost nt-seam
+- classify the OST as nt-seam
 
 event-group and ( a-am-rhyme or ( a-rhyme and singular ) or ( female and singular ) ) and aumus
 - log that the unit # has an aumus a-am-seam
