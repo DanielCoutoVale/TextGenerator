@@ -6,6 +6,7 @@ verb
 - expand the Seam with a Leaf
 - classify the Leaf as morphemes
 - classify the Leaf as leaf
+- classify the Leaf as verbal
 - place the Core before the Seam
 
 verb and ō-aspect-core
@@ -251,27 +252,3 @@ verb and hard-strand and rē-branch-core
 
 verb and s-strand and rē-branch-core
 - classify the Branch as s-strand
-
-leaf and ō-leaf and ( bā-branch or b-branch or ē-branch or rē-branch or ( unbranched and s-strand ) )
-- mould substance as consonant
-
-leaf and ō-leaf and unbranched and hard-strand
-- mould substance as sonant
-
-leaf and or-leaf and ( bā-branch or b-branch or ē-branch or rē-branch )
-- mould substance as consonant
-
-leaf and or-leaf and unbranched
-- mould substance as sonant
-
-leaf and nt-leaf and ( bā-branch or b-branch or ē-branch or rē-branch )
-- mould substance as short
-
-leaf and nt-leaf and unbranched
-- mould substance as long
-
-leaf and ntur-leaf and ( bā-branch or b-branch or ē-branch or rē-branch )
-- mould substance as short
-
-leaf and ntur-leaf and unbranched
-- mould substance as long
