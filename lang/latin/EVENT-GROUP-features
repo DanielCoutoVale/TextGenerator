@@ -26,50 +26,50 @@ event-group and compound-past
 - lexify the TenseAuxiliary as base:esse
 - inflectify the TenseAuxiliary as ō-aspect-core
 
-event-group and seam1 and ost
+event-group and ( speaker and singular ) and ost
 - log that the unit # has an ost seam 1
 - classify the OST as seam1
 
-event-group and seam2 and ost
+event-group and ( addressee and singular ) and ost
 - log that the unit # has an ost seam 2
 - classify the OST as seam2
 
-event-group and seam3 and ost
+event-group and ( ( non-interlocutor and singular ) or ( a-am-rhyme or um-um-rhyme or us-um-rhyme ) or ( ( a-rhyme or us-rhyme or um-rhyme ) and singular ) ) and ost
 - log that the unit # has an ost seam 3
 - classify the OST as seam3
 
-event-group and seam4 and ost
+event-group and ( speaker+ and plural ) and ost
 - log that the unit # has an ost seam 4
 - classify the OST as seam4
 
-event-group and seam5 and ost
+event-group and ( speaker- and addressee+ and plural ) and ost
 - log that the unit # has an ost seam 5
 - classify the OST as seam5
 
-event-group and seam6 and ost
+event-group and ( ( speaker- and addressee- and plural ) or ( ae-ās--rhyme or a-a-rhyme or ī-ōs-rhyme ) or ( ( a-rhyme or us-rhyme or um-rhyme ) and plural ) ) and ost
 - log that the unit # has an ost seam 6
 - classify the OST as seam6
 
-event-group and seamA and aumus
-- log that the unit # has an aumus seam A
-- classify the AUMUS as seamA
+event-group and ( a-am-rhyme or ( a-rhyme and singular ) or ( female and singular ) ) and aumus
+- log that the unit # has an aumus a-am-seam
+- classify the AUMUS as a-am-seam
 
-event-group and seamB and aumus
-- log that the unit # has an aumus seam B
-- classify the AUMUS as seamB
+event-group and ( um-um-rhyme or ( um-rhyme and singular ) ) and aumus
+- log that the unit # has an aumus um-um-seam
+- classify the AUMUS as um-um-seam
 
-event-group and seamC and aumus
-- log that the unit # has an aumus seam C
-- classify the AUMUS as seamC
+event-group and ( us-um-rhyme or ( us-rhyme and singular ) or ( male and singular ) ) and aumus
+- log that the unit # has an aumus us-um-seam
+- classify the AUMUS as us-um-seam
 
-event-group and seamD and aumus
-- log that the unit # has an aumus seam D
-- classify the AUMUS as seamD
+event-group and ( ae-ās-rhyme or ( a-rhyme and plural ) or ( male- and plural ) ) and aumus
+- log that the unit # has an aumus ae-ās-seam
+- classify the AUMUS as ae-ās-seam
 
-event-group and seamE and aumus
-- log that the unit # has an aumus seam E
-- classify the AUMUS as seamE
+event-group and ( a-a-rhyme or ( um-rhyme and plural ) ) and aumus
+- log that the unit # has an aumus a-a-seam
+- classify the AUMUS as a-a-seam
 
-event-group and seamF and aumus
-- classify the AUMUS as seamF
-- log that the unit # has an aumus seam F
+event-group and ( ī-ōs-rhyme or ( us-rhyme and plural ) or ( male+ and plural ) ) and aumus
+- log that the unit # has an aumus ī-ōs-seam
+- classify the AUMUS as ī-ōs-seam

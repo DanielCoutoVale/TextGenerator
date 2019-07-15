@@ -13,5 +13,10 @@ public class Garbage implements Expression {
 	public boolean fulfilledComplement(Set<String> featureLiterals) {
 		return false;
 	}
+	
+	@Override
+	public final String toString() {
+		return "#GARBAGE#";
+	}
 
 }

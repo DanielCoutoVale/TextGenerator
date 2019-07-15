@@ -21,8 +21,16 @@ public class ExpressionTokenList extends LinkedList<ExpressionTokens> implements
 		for (int i = 0; i < tokens.size(); i++) {
 			String token = tokens.get(i);
 			if (token.equals("(")) {
-				for (int j = tokens.size() - 1; j > i + 1; j--) {
+				int count = 1;
+				for (int j = i + 1; j < tokens.size(); j++) {
+					token = tokens.get(j);
 					if (token.equals("(")) {
+						count++;
+					}
+					if (token.equals(")")) {
+						count--;
+					}
+					if (count == 0) {
 						ExpressionTokens exp = new ExpressionTokenList(tokens.subList(i + 1, j));
 						this.add(exp);
 						i = j;
@@ -59,13 +67,13 @@ public class ExpressionTokenList extends LinkedList<ExpressionTokens> implements
 				if (type == 2 && exp.token == AND) return new Garbage();
 				if (type == 1 && exp.token == OR) return new Garbage();
 			}
-			List<Expression> expressions = new LinkedList<>();
+			List<Expression> members = new LinkedList<>();
 			for (int i = 0; i < this.size(); i+=2) {
 				ExpressionTokens exp = this.get(i);
-				expressions.add(exp.makeExpression());
+				members.add(exp.makeExpression());
 			}
-			if (type == 1) return new And(expressions);
-			if (type == 2) return new Or(expressions);
+			if (type == 1) return new And(members);
+			if (type == 2) return new Or(members);
 		}
 		return new Garbage();
 	}

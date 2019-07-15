@@ -4,20 +4,25 @@ import java.util.Set;
 
 public class Not implements Expression {
 	
-	private final Expression exp;
+	private final Expression operand;
 	
-	public Not(Expression exp) {
-		this.exp = exp;
+	public Not(Expression operand) {
+		this.operand = operand;
 	}
 
 	@Override
 	public boolean fulfilled(Set<String> featureLiterals) {
-		return exp.fulfilledComplement(featureLiterals);
+		return operand.fulfilledComplement(featureLiterals);
 	}
 
 	@Override
 	public boolean fulfilledComplement(Set<String> featureLiterals) {
-		return exp.fulfilled(featureLiterals);
+		return operand.fulfilled(featureLiterals);
+	}
+	
+	@Override
+	public final String toString() {
+		return "not " + operand.toString();
 	}
 	
 }

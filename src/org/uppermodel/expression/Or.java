@@ -5,16 +5,16 @@ import java.util.Set;
 
 public class Or implements Expression {
 	
-	private final List<Expression> expressions;
+	private final List<Expression> members;
 
-	public Or(List<Expression> expressions) {
-		this.expressions = expressions;
+	public Or(List<Expression> members) {
+		this.members = members;
 	}
 
 	@Override
 	public boolean fulfilled(Set<String> featureLiterals) {
-		for (Expression expression : expressions) {
-			if (expression.fulfilled(featureLiterals)) {
+		for (Expression member : members) {
+			if (member.fulfilled(featureLiterals)) {
 				return true;
 			}
 		}
@@ -23,12 +23,24 @@ public class Or implements Expression {
 
 	@Override
 	public boolean fulfilledComplement(Set<String> featureLiterals) {
-		for (Expression expression : expressions) {
-			if (!expression.fulfilledComplement(featureLiterals)) {
+		for (Expression member : members) {
+			if (!member.fulfilledComplement(featureLiterals)) {
 				return false;
 			}
 		}
 		return true;
+	}
+	
+	@Override
+	public final String toString() {
+		StringBuffer buffer = new StringBuffer();
+		for (Expression member : members) {
+			if (buffer.length() != 0) {
+				buffer.append(" or ");
+			}
+			buffer.append(member.toString());
+		}
+		return "(" + buffer.toString() + ")";
 	}
 	
 }

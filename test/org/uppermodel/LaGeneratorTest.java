@@ -80,12 +80,12 @@ public class LaGeneratorTest {
 	}
 
 	private void generateAumusVerb(String item, String core) {
-		generator.generateWord(item, "verb", core, "seamA");
-		generator.generateWord(item, "verb", core, "seamB");
-		generator.generateWord(item, "verb", core, "seamC");
-		generator.generateWord(item, "verb", core, "seamD");
-		generator.generateWord(item, "verb", core, "seamE");
-		generator.generateWord(item, "verb", core, "seamF");
+		generator.generateWord(item, "verb", core, "a-am-seam");
+		generator.generateWord(item, "verb", core, "um-um-seam");
+		generator.generateWord(item, "verb", core, "us-um-seam");
+		generator.generateWord(item, "verb", core, "ae-ās-seam");
+		generator.generateWord(item, "verb", core, "a-a-seam");
+		generator.generateWord(item, "verb", core, "ī-ōs-seam");
 	}
 
 	private final void generateOstVerb(String item, String core) {
@@ -98,18 +98,18 @@ public class LaGeneratorTest {
 	}
 	
 	private final void generateEventGroup(String lowerClass) {
-		generator.generateGroup("Event", lowerClass, "seam1", "seamA");
-		generator.generateGroup("Event", lowerClass, "seam1", "seamC");
-		generator.generateGroup("Event", lowerClass, "seam2", "seamA");
-		generator.generateGroup("Event", lowerClass, "seam2", "seamC");
-		generator.generateGroup("Event", lowerClass, "seam3", "seamA");
-		generator.generateGroup("Event", lowerClass, "seam3", "seamC");
-		generator.generateGroup("Event", lowerClass, "seam4", "seamD");
-		generator.generateGroup("Event", lowerClass, "seam4", "seamF");
-		generator.generateGroup("Event", lowerClass, "seam5", "seamD");
-		generator.generateGroup("Event", lowerClass, "seam5", "seamF");
-		generator.generateGroup("Event", lowerClass, "seam6", "seamD");
-		generator.generateGroup("Event", lowerClass, "seam6", "seamF");
+		generator.generateGroup("Event", lowerClass, "speaker", "female", "singular");
+		generator.generateGroup("Event", lowerClass, "speaker", "male", "singular");
+		generator.generateGroup("Event", lowerClass, "addressee", "female", "singular");
+		generator.generateGroup("Event", lowerClass, "addressee", "male", "singular");
+		generator.generateGroup("Event", lowerClass, "non-interlocutor", "female", "singular");
+		generator.generateGroup("Event", lowerClass, "non-interlocutor", "male", "singular");
+		generator.generateGroup("Event", lowerClass, "speaker+", "male-", "plural");
+		generator.generateGroup("Event", lowerClass, "speaker+", "male+", "plural");
+		generator.generateGroup("Event", lowerClass, "speaker-", "addressee+", "male-", "plural");
+		generator.generateGroup("Event", lowerClass, "speaker-", "addressee+", "male+", "plural");
+		generator.generateGroup("Event", lowerClass, "speaker-", "addressee-", "male-", "plural");
+		generator.generateGroup("Event", lowerClass, "speaker-", "addressee-", "male+", "plural");
 		System.out.println();
 	}
 	
