@@ -1,6 +1,6 @@
 
 TENSE event-group
-- choose past or present or future
+- choose past or past-in-past
 - choose past by default
 
 PAST-TYPE past
@@ -9,8 +9,14 @@ PAST-TYPE past
 - otherwise
   - choose simple-past
 
+PAST-IN-PAST-TYPE past-in-past
+- if the Event is a loquī-type item
+  - choose compound-past-in-past
+- otherwise
+  - choose simple-past-in-past
+
 OST event-group and ( past or present or future )
 - choose ost by default
 
-AUMS event-group and compound-past
+AUMUS event-group and compound-past
 - choose aumus by default

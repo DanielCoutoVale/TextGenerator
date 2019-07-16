@@ -247,8 +247,8 @@ verb and s-strand
 verb and hard-strand
 - classify the Leaf as hard-strand
 
-verb and hard-strand and rē-branch-core
+verb and hard-strand and ( rē-branch-core or bā-branch-core )
 - classify the Branch as hard-strand
 
-verb and s-strand and rē-branch-core
+verb and s-strand and ( rē-branch-core or bā-branch-core )
 - classify the Branch as s-strand

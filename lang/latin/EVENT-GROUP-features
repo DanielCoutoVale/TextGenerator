@@ -1,14 +1,19 @@
 
-event-group and simple-past
+event-group and ( simple-past or simple-past-in-past )
 - log that the unit # is a simple past event group
 - log that the unit ###E is a simple past event group
 - insert an OST
 - insert a Tense
 - conflate the Tense with the OST
 - conflate the Tense with the Event
+
+event-group and simple-past
 - inflectify the Tense as ī-aspect-core
 
-event-group and compound-past
+event-group and simple-past-in-past
+- inflectify the Tense as erā-branch-core
+
+event-group and ( compound-past or compound-past-in-past )
 - log that the unit # is a compound past event group
 - log that the unit ## is a simple past event group
 - log that the unit ###E is a simple past event group
@@ -24,7 +29,12 @@ event-group and compound-past
 - classify the TenseAuxiliary as words
 - classify the TenseAuxiliary as verb
 - lexify the TenseAuxiliary as base:esse
+
+event-group and compound-past
 - inflectify the TenseAuxiliary as ō-aspect-core
+
+event-group and compound-past-in-past
+- inflectify the TenseAuxiliary as bā-branch-core
 
 event-group and ( speaker and singular ) and ost
 - log that the unit # has an ost ō-seam

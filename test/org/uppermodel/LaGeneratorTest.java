@@ -32,20 +32,6 @@ public class LaGeneratorTest {
 		System.out.println();
 	}
 
-//	@Test
-//	public final void test4() throws IOException {
-//		generator = new Generator("lang/latin");
-//		generator.setLogging(false);
-//		System.out.println();
-//		generator.generate("I ate a pizza.");
-//		generator.generate("I ate a [food].", "pizza");
-//		generator.generate("I ate a [food].", "hotdog");
-//		generator.generate("I ate [number] (pizza).", "one");
-//		generator.generate("I ate [number] {food}.", "one", "hotdog");
-//		generator.generate("I ate [number] (pizza).", "two");
-//		generator.generate("I ate [number] {food}.", "two", "hotdog");
-//	}
-
 	@Test
 	public final void test2() throws IOException {
 		generator = new Generator("lang/latin");
@@ -56,6 +42,7 @@ public class LaGeneratorTest {
 		generateDīcereTypeVerb("base:audīre");
 		generateLoquīTypeVerb("base:loquī");
 		generateOstVerb("base:esse", "ō-aspect-core");
+		generateOstVerb("base:esse", "bā-branch-core");
 		System.out.println();
 	}
 
@@ -97,7 +84,7 @@ public class LaGeneratorTest {
 		generator.generateWord(item, "verb", core, "nt-seam");
 	}
 	
-	private final void generateEventGroup(String lowerClass) {
+	private final void generateEventGroup(String lowerClass, String tense) {
 		generator.generateGroup("Event", lowerClass, "speaker", "female", "singular");
 		generator.generateGroup("Event", lowerClass, "speaker", "male", "singular");
 		generator.generateGroup("Event", lowerClass, "addressee", "female", "singular");
@@ -113,6 +100,10 @@ public class LaGeneratorTest {
 		System.out.println();
 	}
 	
+	private void generateEventGroup(String lowerClass) {
+		generateEventGroup(lowerClass, "past");
+	}
+	
 	@Test
 	public final void test3() throws IOException {
 		generator = new Generator("lang/latin");
@@ -120,5 +111,7 @@ public class LaGeneratorTest {
 		generateEventGroup("Saying");
 		generateEventGroup("Speaking");
 	}
+
+	
 	
 }
