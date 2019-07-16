@@ -1,4 +1,16 @@
 
+base:sein schlafen-type verbal
+sei - e-aspect long
+is - e-aspect short
+wes - ge-aspect
+war - te-aspect
+
+base:gelten schlafen-type verbal
+gelt - e-aspect long
+gilt - e-aspect short
+golt - ge-aspect
+galt - te-aspect
+
 base:haben
 hab - e-aspect long
 ha - e-aspect short

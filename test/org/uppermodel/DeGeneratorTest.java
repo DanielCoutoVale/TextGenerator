@@ -22,6 +22,20 @@ public class DeGeneratorTest {
 		generator.generateWord(lex, "verb", "te-core", "seam4");
 		generator.generateWord(lex, "verb", "te-core", "seam5");
 	}
+	
+	private final void generateQualityGroup(String lowerClass) {
+		System.out.println();
+		generator.generateGroup("Quality", lowerClass, "seam1");
+		generator.generateGroup("Quality", lowerClass, "seam2");
+		generator.generateGroup("Quality", lowerClass, "seam3");
+		generator.generateGroup("Quality", lowerClass, "seam4");
+		generator.generateGroup("Quality", lowerClass, "seam5");
+		generator.generateGroup("Quality", lowerClass, "past", "seam1");
+		generator.generateGroup("Quality", lowerClass, "past", "seam2");
+		generator.generateGroup("Quality", lowerClass, "past", "seam3");
+		generator.generateGroup("Quality", lowerClass, "past", "seam4");
+		generator.generateGroup("Quality", lowerClass, "past", "seam5");
+	}
 
 	private final void generateEventGroup(String lowerClass) {
 		System.out.println();
@@ -60,6 +74,14 @@ public class DeGeneratorTest {
 		generateEventGroup("Singing");
 		generateEventGroup("Sleeping");
 		generateEventGroup("Studying");
+	}
+	
+	@Test
+	public final void test3() throws IOException {
+		generator = new Generator("lang/german");
+		generator.setLogging(false);
+		generateQualityGroup("Valid1");
+		generateQualityGroup("Valid2");
 	}
 	
 }

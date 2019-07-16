@@ -1,12 +1,4 @@
 
-words
-- log that the unit # is a word
-- insert a Core
-- expand the Core with a Stem
-- classify the Stem as morphemes
-- classify the Stem as stem
-- lexify the Stem like this unit
-
 verb and ge-core
 - log that the unit # is a ge-core verb
 - classify the Stem as ge-aspect

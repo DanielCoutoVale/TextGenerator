@@ -55,3 +55,11 @@ event-group
 - insert an Event
 - classify the Event as words
 - classify the Event as verb
+
+words
+- log that the unit # is a word
+- insert a Core
+- expand the Core with a Stem
+- classify the Stem as morphemes
+- classify the Stem as stem
+- lexify the Stem like this unit

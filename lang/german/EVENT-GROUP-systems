@@ -3,10 +3,10 @@ TENSE event-group
 - choose past or non-past
 - choose past by default
 
-PAST-TYPE past
+PAST-TYPE event-group and past
 - choose simple-past or compound-past
 - choose compound-past by default
 
-COMPOUND-PAST-TYPE compound-past
+COMPOUND-PAST-TYPE event-group and compound-past
 - choose haben-past or sein-past
 - choose haben-past by default

@@ -1,0 +1,46 @@
+ 
+quality-group and verbal
+- log that the unit # is verbal
+- classify the Quality as verb
+- insert a Tense
+- conflate the Tense with the Quality
+- insert an Estt
+- conflate the Estt with the Quality
+
+quality-group and adjectival
+- log that the unit # is adjectival
+- classify the Quality as adjective
+- insert a Tense
+- place the Quality before the Tense
+- classify the Tense as verb
+- lexify the Tense as base:sein
+- insert an Estt
+- conflate the Estt with the Tense
+
+quality-group and non-past
+- log that the unit # is non-past
+- inflectify the Tense as bare-core
+
+quality-group and past
+- log that the unit # is past
+- inflectify the Tense as te-core
+
+quality-group and seam1
+- log that the unit # is seam1
+- inflectify the Estt as seam1
+
+quality-group and seam2
+- log that the unit # is seam2
+- inflectify the Estt as seam2
+
+quality-group and seam3
+- log that the unit # is seam3
+- inflectify the Estt as seam3
+
+quality-group and seam4
+- log that the unit # is seam4
+- inflectify the Estt as seam4
+
+quality-group and seam5
+- log that the unit # is seam5
+- inflectify the Estt as seam5

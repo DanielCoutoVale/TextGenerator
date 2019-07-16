@@ -1,0 +1,10 @@
+
+QUALITY-GROUP-CLASS quality-group
+- if the Quality is a verbal item
+  - choose verbal
+- if the Quality is a adjectival item
+  - choose adjectival
+
+QUALITY-GROUP-TENSE quality-group
+- choose past or non-past
+- choose non-past by default
