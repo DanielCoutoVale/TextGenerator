@@ -92,6 +92,7 @@ German:
 - Das **Bad**licht ist an.
 
 ##### 9. Participation vs classification
+
 English:
 - Ivan Rakitic scored for **Barcelona** in the 4th minute.
 - **Barcelona** **player** Ivan Rakitic scored in the 4th minute.
