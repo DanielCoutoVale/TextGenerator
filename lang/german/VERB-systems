@@ -6,8 +6,10 @@ STRAND verb
   - choose r-strand
 - if the Unit is a labeln-type item
   - choose l-strand
-- if the Unit is a arbeiten-type item
+- if the Unit is an arbeiten-type item
   - choose t-strand
+- if the Unit is a gelten-type item
+  - choose lt-strand
 - otherwise
   - choose hard-strand
 
@@ -20,6 +22,8 @@ GE-BRANCH-PRESENCE verb and ge-core
 N-BRANCH-QUALITY verb and ge-core
 - if the Unit is an schlafen-type item
   - choose n-branch-nasal-long
+- if the Unit is a gelten-type item
+  - choose n-branch-nasal-long
 - if the Unit is a tun-type item
   - choose n-branch-nasal-short
 - otherwise
@@ -27,6 +31,8 @@ N-BRANCH-QUALITY verb and ge-core
 
 TE-BRANCH-PRESENCE verb and te-core
 - if the Unit is an schlafen-type item
+  - choose te-branch-absent
+- if the Unit is a gelten-type item
   - choose te-branch-absent
 - otherwise
   - choose te-branch-present
@@ -36,3 +42,23 @@ TE-BRANCH-LENGTH verb and te-core and te-branch-present
   - choose te-branch-short
 - otherwise
   - choose te-branch-long
+
+SEAM3-PRESENCE verb and bare-core and seam3
+- if the Unit is a gelten-type item
+  - choose seam3-absent
+- otherwise
+  - choose seam3-present
+
+SEAM3-LENGTH verb and bare-core and seam3 and seam3-present
+- if the Unit is an arbeiten-type item
+  - choose seam3-long
+- otherwise
+  - choose seam3-short
+
+SEAM5-LENGTH verb and bare-core and seam5
+- if the Unit is a gelten-type item
+  - choose seam5-long
+- if the Unit is an arbeiten-type item
+  - choose seam5-long
+- otherwise
+  - choose seam5-short

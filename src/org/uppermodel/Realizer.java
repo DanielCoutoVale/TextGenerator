@@ -2,6 +2,7 @@ package org.uppermodel;
 
 import static org.uppermodel.theory.Statement.Type.*;
 
+import java.util.Collection;
 import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
@@ -191,7 +192,18 @@ public class Realizer {
 				String operand1 = statement.operand(0);
 				String operand2 = statement.operand(1);
 				Knob knob1 = map.get(operand1);
-				if (knob1.children.size() > 0) throw new Error();
+				if (knob1 == null) {
+					System.out.println(operand1 + " was not inserted and cannot be lexified with " + operand2);
+					System.out.println(pretty(statements));
+					System.out.println(pretty(wording.features));
+					throw new Error();
+				}
+				if (knob1.children.size() > 0) {
+					System.out.println(operand1 + " is a structure and cannot be lexified with " + operand2);
+					System.out.println(pretty(statements));
+					System.out.println(pretty(wording.features));
+					throw new Error();
+				}
 				Unit subwording = associationMap.getUnit(operand1, Stratum.wording);
 				Unit subcalling = new Unit(operand2);
 				for (String function : subwording.functions) {
@@ -216,6 +228,12 @@ public class Realizer {
 				String operand1 = statement.operand(0);
 				String operand2 = statement.operand(1);
 				Knob knob1 = map.get(operand1);
+				if (knob1 == null) {
+					System.out.println(operand1 + " was not inserted and cannot be inflectified with " + operand2);
+					System.out.println(pretty(statements));
+					System.out.println(pretty(wording.features));
+					throw new Error();
+				}
 				if (knob1.children.size() > 0) throw new Error();
 				Unit unit1 = knob1.unit;
 				unit1.features.add(operand2);
@@ -226,6 +244,12 @@ public class Realizer {
 				String operand1 = statement.operand(0);
 				String operand2 = statement.operand(1);
 				Knob knob1 = map.get(operand1);
+				if (knob1 == null) {
+					System.out.println(operand1 + " was not inserted and cannot be classified with " + operand2);
+					System.out.println(pretty(statements));
+					System.out.println(pretty(wording.features));
+					throw new Error();
+				}
 				if (knob1.children.size() > 0) throw new Error();
 				Unit unit1 = knob1.unit;
 				unit1.features.add(operand2);
@@ -247,6 +271,14 @@ public class Realizer {
 				associationMap.setUnit(function, Stratum.wording, constituent);
 			}
 		}
+	}
+
+	private <T> String pretty(Collection<T> collection) {
+		return collection
+				.toString()
+				.replace(",", "\n-")
+				.replace("[", "- ")
+				.replace("]", "");
 	}
 
 	private void collectPairs(List<Pair> pPairs, Knob knob1, Knob knob2) {

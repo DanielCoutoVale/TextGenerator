@@ -28,6 +28,8 @@ verb and ge-core and n-branch-nasal-long
 verb and bare-core
 - log that the unit # is a bare-core verb
 - classify the Stem as e-aspect
+
+verb and bare-core and ( seam1 or seam2 or ( seam3 and seam3-present ) or seam4 or seam5 )
 - insert an Seam
 - expand the Seam with a Leaf
 - classify the Leaf as morphemes
@@ -83,6 +85,10 @@ verb and bare-core and l-strand
 - log that the unit # is a l-strand verb
 - classify the Leaf as l-strand
 
+verb and bare-core and lt-strand and ( seam1 or seam2 or ( seam3 and seam3-present ) or seam4 or seam5 )
+- log that the unit # is a lt-strand verb
+- classify the Leaf as lt-strand
+
 verb and bare-core and t-strand
 - log that the unit # is a t-strand verb
 - classify the Leaf as t-strand
@@ -92,42 +98,48 @@ verb and bare-core and hard-strand
 - classify the Leaf as hard-strand
 
 verb and bare-core and seam1
-- log that the unit # is a seam1 stem
-- lexify the Leaf as e-leaf
-
-verb and bare-core and seam1
 - classify Stem seam1
-
-verb and seam2
-- log that the unit # is a seam2 stem
-- lexify the Leaf as st-leaf
 
 verb and bare-core and seam2
 - classify Stem seam2
 
 verb and bare-core and seam3
-- log that the unit # is a seam3 stem
-- classify the Leaf as t-leaf
-- lexify the Leaf as t-leaf
-
-verb and bare-core and seam3
 - classify Stem seam3
-
-verb and seam4
-- log that the unit # is a seam4 stem
-- classify the Leaf as t-leaf
-- lexify the Leaf as t-leaf
 
 verb and bare-core and seam4
 - classify Stem seam4
 
-verb and seam5
-- log that the unit # is a seam5 stem
+verb and bare-core and seam5
+- classify Stem seam5
+
+verb and bare-core and seam1
+- log that the unit # is a seam1 stem
+- lexify the Leaf as e-leaf
+
+verb and seam2
+- log that the unit # is a seam2 stem
+- lexify the Leaf as st-leaf
+
+verb and bare-core and seam3 and seam3-present
+- log that the unit # is a seam3 stem
+- classify the Leaf as t-leaf
+- lexify the Leaf as t-leaf
+
+verb and seam4
+- log that the unit # is a seam4 stem
 - classify the Leaf as n-leaf
 - lexify the Leaf as n-leaf
 
-verb and bare-core and seam5
-- classify Stem seam5
+verb and seam5
+- log that the unit # is a seam5 stem
+- classify the Leaf as t-leaf
+- lexify the Leaf as t-leaf
+
+verb and bare-core and ( seam3-short or seam5-short )
+- classify the Leaf as short
+
+verb and bare-core and ( seam3-long or seam5-long )
+- classify the Leaf as long
 
 stem
 - log that the unit # is a stem
@@ -180,15 +192,15 @@ branch and te-branch and te-branch-short
 leaf
 - log that the unit # is a leaf
 
-leaf and t-leaf and te-branch-short
+leaf and t-leaf and ( ( unbranched and long ) or te-branch-short or te-branch-absent )
 - log that the unit # is a long t-leaf leaf
 - mould substance as long
 
-leaf and t-leaf and ( unbranched or te-branch-long or te-branch-absent )
+leaf and t-leaf and ( ( unbranched and short ) or te-branch-long )
 - log that the unit # is a short t-leaf leaf
 - mould substance as short
 
-leaf and n-leaf and ( te-branch-short or te-branch-absent or ( hard-strand and unbranched ) )
+leaf and n-leaf and ( te-branch-short or te-branch-absent or ( ( hard-strand or lt-strand ) and unbranched ) )
 - log that the unit # is a long n-leaf leaf
 - mould substance as long
 
